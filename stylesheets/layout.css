@@ -18,6 +18,7 @@ body {
   --lightblue: #b8c9ff;
   --yellow: #ddff00;
   --darkyellow: #8cac37;
+  --green: #1db954;
   --white: #ffffff;
   --darkwhite: #e5eeff;
   --black: #0a0a0a;
@@ -1324,6 +1325,10 @@ li {
 
 .btn-cart:active {
   transform: scale(0.96);
+}
+
+.btn-cart.button-in-cart {
+  background-color: var(--green);
 }
 
 /* <!---------------------------- МЕРЧ ------------------------------> */

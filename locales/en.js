@@ -7,5 +7,8 @@ export default {
   "nav.merch": "Merch",
   "nav.trial": "Trial Lesson",
 
+  "course-button-cart-add": "To cart",
+  "course-button-cart-in": "Added",
+
   "img.main-first-card": "images/main_first_card_en.svg",
 };

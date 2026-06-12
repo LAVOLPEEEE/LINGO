@@ -1,3 +1,10 @@
+let currentTranslations = {};
+
+// Получить тест перевода по выбранному языку для конкретной фразы
+function getCurrentTranslation(key) {
+  return currentTranslations[key] || key;
+}
+
 async function setLang(lang, button) {
   let buttons = document.querySelectorAll(".lang-btn");
 
@@ -14,6 +21,8 @@ async function loadLanguage(lang) {
   const module = await import(`../locales/${lang}.js`);
 
   const translations = module.default;
+
+  currentTranslations = translations;
 
   // Локализация текста
   document.querySelectorAll("[data-lang]").forEach((element) => {
@@ -34,8 +43,12 @@ async function loadLanguage(lang) {
   });
 
   localStorage.setItem("language", lang);
+
+  // Обновляем надписи кнопок корзины
+  updateCartTexts();
 }
 
+// Настройка кнопок для переключаения языка
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     setLang(btn.dataset.langBtn, btn);

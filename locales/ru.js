@@ -7,5 +7,8 @@ export default {
   "nav.merch": "Мерч",
   "nav.trial": "Пробный урок",
 
+  "course-button-cart-add": "В корзину",
+  "course-button-cart-in": "Добавлено",
+
   "img.main-first-card": "images/main_first_card_ru.svg",
 };

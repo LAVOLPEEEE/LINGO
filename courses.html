@@ -11,18 +11,20 @@
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О школе </a>
-        <a href="courses.html" class="active">Курсы</a>
-        <a href="events.html">Ивенты</a>
-        <a href="study.html">Обучение</a>
-        <a href="merch.html">Мерч</a>
-        <a href="courses.html" class="always-active">Пробный урок</a>
+        <a href="index.html" data-lang="nav.home">Главная</a>
+        <a href="about.html" data-lang="nav.about">О школе </a>
+        <a href="courses.html" class="active" data-lang="nav.courses">Курсы</a>
+        <a href="events.html" data-lang="nav.events">Ивенты</a>
+        <a href="study.html" data-lang="nav.study">Обучение</a>
+        <a href="merch.html" data-lang="nav.merch">Мерч</a>
+        <a href="courses.html" class="always-active" data-lang="nav.trial"
+          >Пробный урок</a
+        >
       </nav>
       <div class="header-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang(this)">RU</button>
-          <button class="lang-btn" onclick="setLang(this)">EN</button>
+          <button class="lang-btn active" data-lang-btn="ru">RU</button>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -48,7 +50,11 @@
       </div>
 
       <div class="grid" id="grid">
-        <div class="card-course" data-category="english">
+        <div
+          class="card-course"
+          data-category="english"
+          data-course-name="course-english-life"
+        >
           <div class="card-course-img card-course-blue">
             <p class="flag">🇬🇧</p>
             <p class="level-label">A1–C1</p>
@@ -67,12 +73,17 @@
             </div>
             <div class="card-course-footer">
               <div class="price">4 900 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="card-course" data-category="english">
+        <div
+          class="card-course"
+          data-category="english"
+          data-course-name="course-english-business"
+        >
           <div class="card-course-img card-course-yellow">
             <p class="flag">💼</p>
             <p class="level-label">B1+</p>
@@ -91,12 +102,18 @@
             </div>
             <div class="card-course-footer">
               <div class="price">6 500 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-course" data-category="german">
+        <div
+          class="card-course"
+          data-category="german"
+          data-course-name="course-german"
+        >
           <div class="card-course-img card-course-black">
             <p class="flag">🇩🇪</p>
             <p class="level-label">A1–B2</p>
@@ -114,12 +131,18 @@
             </div>
             <div class="card-course-footer">
               <div class="price">5 200 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-course" data-category="french">
+        <div
+          class="card-course"
+          data-category="french"
+          data-course-name="course-french"
+        >
           <div class="card-course-img card-course-darkwhite">
             <p class="flag">🇫🇷</p>
             <p class="level-label">A1–C1</p>
@@ -137,12 +160,17 @@
             </div>
             <div class="card-course-footer">
               <div class="price">4 900 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="card-course" data-category="spanish">
+        <div
+          class="card-course"
+          data-category="spanish"
+          data-course-name="course-spanish"
+        >
           <div class="card-course-img card-course-orange">
             <p class="flag">🇪🇸</p>
             <p class="level-label">B1+</p>
@@ -161,12 +189,18 @@
             </div>
             <div class="card-course-footer">
               <div class="price">4 900 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-course" data-category="chinese">
+        <div
+          class="card-course"
+          data-category="chinese"
+          data-course-name="course-chinese"
+        >
           <div class="card-course-img card-course-red">
             <p class="flag">🇨🇳</p>
             <p class="level-label">A1–B2</p>
@@ -185,7 +219,9 @@
             </div>
             <div class="card-course-footer">
               <div class="price">5 800 ₽ <span>/мес</span></div>
-              <button class="btn-cart">В корзину</button>
+              <button class="btn-cart" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -194,5 +230,7 @@
 
     <script src="javascripts/filter.js"></script>
     <script src="javascripts/header.js"></script>
+    <script src="javascripts/localization.js"></script>
+    <script src="javascripts/cart.js"></script>
   </body>
 </html>
