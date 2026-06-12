@@ -5,19 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курсы</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/scripts.js"></script>
+    <script defer src="javascripts/main.js"></script>
   </head>
   <body>
-    <nav class="mainMenu">
-      <a href="index.html">Главная</a>
-      <a href="about.html">О школе L!NGO</a>
-      <a href="app.html">Приложение</a>
-      <a href="building.html">Здание</a>
-      <a href="courses.html" class="active">Курсы</a>
-      <a href="events.html">Ивенты</a>
-      <a href="merch.html">Мерч</a>
-    </nav>
+    <header>
+      <a href="index.html" class="logo">LINGO</a>
+      <nav class="mainMenu">
+        <a href="index.html">Главная</a>
+        <a href="about.html">О школе </a>
+        <a href="courses.html" class="active">Курсы</a>
+        <a href="events.html">Ивенты</a>
+        <a href="study.html">Обучение</a>
+        <a href="merch.html">Мерч</a>
+        <a href="courses.html" class="always-active">Пробный урок</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang(this)">RU</button>
+          <button class="lang-btn" onclick="setLang(this)">EN</button>
+        </div>
 
-    <h1>Курсы</h1>
+        <button class="cart-btn" onclick="openCart()">
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger">☰</button>
+      </div>
+    </header>
+
+    <section class="course-first">
+      <div class="course-first-label">КУРСЫ</div>
+      <div class="course-first-title">Выбери свой язык</div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="english">Английский</button>
+        <button class="filter-btn" data-filter="german">Немецкий</button>
+        <button class="filter-btn" data-filter="french">Французский</button>
+        <button class="filter-btn" data-filter="spanish">Испанский</button>
+        <button class="filter-btn" data-filter="chinese">Китайский</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <div class="card-course" data-category="english">
+          <div class="card-course-img card-course-blue">
+            <p class="flag">🇬🇧</p>
+            <p class="level-label">A1–C1</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Английский</div>
+            <div class="card-course-title">Английский для жизни</div>
+            <div class="card-course-desc">
+              Полный курс с нуля до уверенного общения. Разговорный язык,
+              грамматика, произношение.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 3 раза/нед</span>
+              <span class="meta-item">👥 до 8 чел</span>
+              <span class="meta-item">⏱️ 6 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-course" data-category="english">
+          <div class="card-course-img card-course-yellow">
+            <p class="flag">💼</p>
+            <p class="level-label">B1+</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Бизнес-английский</div>
+            <div class="card-course-title">English for Business</div>
+            <div class="card-course-desc">
+              Переговоры, презентации, деловая переписка. Реальные кейсы для
+              бизнеса.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 2 раза/нед</span>
+              <span class="meta-item">👥 до 8 чел</span>
+              <span class="meta-item">⏱️ 4 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">6 500 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-course" data-category="german">
+          <div class="card-course-img card-course-black">
+            <p class="flag">🇩🇪</p>
+            <p class="level-label">A1–B2</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Немецкий</div>
+            <div class="card-course-title">Немецкий с нуля</div>
+            <div class="card-course-desc">
+              Системный подход к немецкому: от алфавита до свободного общения.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 2 раза/нед</span>
+              <span class="meta-item">👥 до 8 чел</span>
+              <span class="meta-item">⏱️ 8 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">5 200 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-course" data-category="french">
+          <div class="card-course-img card-course-darkwhite">
+            <p class="flag">🇫🇷</p>
+            <p class="level-label">A1–C1</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Французский</div>
+            <div class="card-course-title">Разговорный французский</div>
+            <div class="card-course-desc">
+              Живой разговорный французский: акцент на произношении и культуре.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 2 раза/нед</span>
+              <span class="meta-item">👥 до 8 чел</span>
+              <span class="meta-item">⏱️ 6 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-course" data-category="spanish">
+          <div class="card-course-img card-course-orange">
+            <p class="flag">🇪🇸</p>
+            <p class="level-label">B1+</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Испанский</div>
+            <div class="card-course-title">Испанский для жизни</div>
+            <div class="card-course-desc">
+              Испанский через культуру: музыка, кино, путешествия. Заговоришь
+              быстро.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 3 раза/нед</span>
+              <span class="meta-item">👥 до 8 чел</span>
+              <span class="meta-item">⏱️ 5 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-course" data-category="chinese">
+          <div class="card-course-img card-course-red">
+            <p class="flag">🇨🇳</p>
+            <p class="level-label">A1–B2</p>
+          </div>
+          <div class="card-course-body">
+            <div class="lang-label">Китайский</div>
+            <div class="card-course-title">Китайский с нуля</div>
+            <div class="card-course-desc">
+              Мандаринский китайский: иероглифы, тоны, разговорный язык и
+              письмо.
+            </div>
+            <div class="card-course-meta">
+              <span class="meta-item">📅 3 раза/нед</span>
+              <span class="meta-item">👥 до 6 чел</span>
+              <span class="meta-item">⏱️ 10 мес</span>
+            </div>
+            <div class="card-course-footer">
+              <div class="price">5 800 ₽ <span>/мес</span></div>
+              <button class="btn-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="javascripts/filter.js"></script>
+    <script src="javascripts/header.js"></script>
   </body>
 </html>

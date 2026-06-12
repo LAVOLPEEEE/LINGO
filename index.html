@@ -5,19 +5,363 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/scripts.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <nav class="mainMenu">
-      <a href="index.html" class="active">Главная</a>
-      <a href="about.html">О школе L!NGO</a>
-      <a href="app.html">Приложение</a>
-      <a href="building.html">Здание</a>
-      <a href="courses.html">Курсы</a>
-      <a href="events.html">Ивенты</a>
-      <a href="merch.html">Мерч</a>
-    </nav>
+    <header>
+      <a href="index.html" class="logo">LINGO</a>
+      <nav class="mainMenu">
+        <a href="index.html" class="active">Главная</a>
+        <a href="about.html">О школе </a>
+        <a href="courses.html">Курсы</a>
+        <a href="events.html">Ивенты</a>
+        <a href="study.html">Обучение</a>
+        <a href="merch.html">Мерч</a>
+        <a href="courses.html" class="always-active">Пробный урок</a>
+      </nav>
+      <div class="header-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang(this)">RU</button>
+          <button class="lang-btn" onclick="setLang(this)">EN</button>
+        </div>
 
-    <h1>Главная</h1>
+        <button class="cart-btn" onclick="openCart()">
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger">☰</button>
+      </div>
+    </header>
+
+    <section class="main-first">
+      <div class="left-main-first">
+        <p class="main-first-label">
+          <span class="dot">● </span> Языковая школа нового поколения
+        </p>
+        <div class="left-bottom-main-first">
+          <h1 class="main-first-title">
+            Учи языки<br /><span>без скуки</span>
+          </h1>
+          <p class="main-first-description">
+            LINGO — это живое обучение, реальные разговоры, крутые ивенты и
+            международное сообщество. Начни с любого уровня.
+          </p>
+          <div class="main-first-btns">
+            <a href="courses.html" class="btn-yellow">Выбрать курс →</a>
+            <a href="about.html" class="btn-transparent">О школе</a>
+          </div>
+        </div>
+      </div>
+      <img class="card-main-first" src="images/main_first_card.svg" alt="" />
+      <img class="msg1-main-first" src="images/main_first_msg1.svg" alt="" />
+      <img class="msg2-main-first" src="images/main_first_msg2.svg" alt="" />
+    </section>
+
+    <div class="stroke">
+      <div class="running-stroke">
+        <span>Английский</span><span class="stroke-dot">●</span>
+        <span>Испанский</span><span class="stroke-dot">●</span>
+        <span>Немецкий</span><span class="stroke-dot">●</span>
+        <span>Французский</span><span class="stroke-dot">●</span>
+        <span>Итальянский</span><span class="stroke-dot">●</span>
+        <span>Китайский</span><span class="stroke-dot">●</span>
+        <span>Японский</span><span class="stroke-dot">●</span>
+        <span>Португальский</span><span class="stroke-dot">●</span>
+        <span>Английский</span><span class="stroke-dot">●</span>
+        <span>Испанский</span><span class="stroke-dot">●</span>
+        <span>Немецкий</span><span class="stroke-dot">●</span>
+        <span>Французский</span><span class="stroke-dot">●</span>
+        <span>Итальянский</span><span class="stroke-dot">●</span>
+        <span>Китайский</span><span class="stroke-dot">●</span>
+        <span>Японский</span><span class="stroke-dot">●</span>
+        <span>Португальский</span><span class="stroke-dot">●</span>
+      </div>
+    </div>
+
+    <section class="main-second">
+      <div class="left-main-second">
+        <p class="main-second-label">О ШКОЛЕ</p>
+        <div class="left-bottom-main-second">
+          <h1 class="main-second-title">Языки для всех и каждого</h1>
+          <div class="main-second-description">
+            <p>
+              LINGO — это глобальная языковая школа для&nbspлюдей любого
+              возраста и возможностей. Мы&nbspделаем изучение языков доступным
+              и&nbspинклюзивным.
+            </p>
+            <p>
+              С нами ты не просто учишься — ты попадаешь в&nbspсообщество, где
+              язык становится частью жизни. Ивенты, хакатоны, разговорные клубы.
+            </p>
+          </div>
+          <div class="main-sceond-btns">
+            <a href="about.html" class="btn-blue">Подробнее о нас →</a>
+          </div>
+        </div>
+      </div>
+      <div class="right-main-second">
+        <div class="top-right-main-second">
+          <div class="stat-box">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Городов в России и мире</div>
+          </div>
+          <div class="stat-box2">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Языков в программе</div>
+          </div>
+        </div>
+        <div class="bottom-right-main-second">
+          <div class="stat-box">
+            <div class="stat-number">30к</div>
+            <div class="stat-label">Студентов по всему миру</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">96%</div>
+            <div class="stat-label">Довольных выпускников</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-third">
+      <div class="study-format-content">
+        <span class="study-format-label">B LINGO</span>
+        <h2 class="study-format-title">
+          Формат обучения
+          <span class="changing-word">удобный</span>
+        </h2>
+        <p class="study-format-text">
+          Мы не привязываем тебя к жёсткому расписанию. Учись&nbsp;так,
+          &nbsp;как&nbsp;удобно именно тебе.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🕒</div>
+            <div>
+              <h3>Гибкое расписание</h3>
+              <p>
+                Занятия утром, днём или вечером — выбирай слоты под свой ритм
+                жизни.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💻</div>
+            <div>
+              <h3>Личный кабинет</h3>
+              <p>
+                Все уроки, задания, прогресс и записи занятий в одном месте.
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <div>
+              <h3>Финальная аттестация</h3>
+              <p>
+                Международный сертификат и помощь с подготовкой к экзаменам.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="main-third-btns">
+          <a href="study.html" class="btn-yellow1">Подробнее об обучении →</a>
+        </div>
+      </div>
+      <img class="card-main-third" src="images/main_third_card.svg" alt="" />
+      <img
+        class="stroke-main-third"
+        src="images/main_third_stroke.svg"
+        alt=""
+      />
+    </section>
+
+    <section class="main-forth">
+      <div class="main-forth-label">Активности</div>
+      <div class="main-forth-title">Ивенты каждый месяц</div>
+      <div class="carousel-wrap" id="cw">
+        <div class="carousel-track" id="track"></div>
+      </div>
+      <div class="main-forth-btns">
+        <a href="events.html" class="btn-transparent2">Все ивенты →</a>
+      </div>
+      <img
+        class="transition-forth-left"
+        src="images/transition-left.svg"
+        alt=""
+      />
+      <img
+        class="transition-forth-right"
+        src="images/transition-right.svg"
+        alt=""
+      />
+    </section>
+
+    <section class="main-fifth">
+      <div class="full-main-fifth-label">
+        <div class="fifth-label">FAQ</div>
+        <h2 class="fifth-h2">Часто задаваемые<br />вопросы</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Есть ли рассрочка? <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            Да, мы работаем с Тинькофф, Сбербанком и ПСБ — рассрочка 0% на срок
+            до 12 месяцев без переплат.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Можно ли совмещать онлайн и офлайн?
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            Да! Наш гибридный формат позволяет чередовать занятия в классе и
+            онлайн — как удобнее в конкретную неделю.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Что будет, если пропустить занятие? <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            Все занятия записываются. Можно перенести урок без штрафа при
+            уведомлении за 24 часа. Пропущенный материал всегда доступен в
+            личном кабинете.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Какой сертификат я получу? <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            По окончании курса выдаётся сертификат LINGO, признанный более чем
+            60 компаниями-партнёрами. Также мы готовим к международным
+            экзаменам: IELTS, TOEFL, DELF, DELE, Goethe-Zertifikat.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="free-lesson" class="main-sixth">
+      <div class="free-lesson-inner">
+        <span class="main-sixth-label">Первый шаг</span>
+        <h2 class="main-sixth-title">Пробный урок бесплатно</h2>
+        <p class="main-sixth-des">
+          Познакомишься с преподавателем, поймёшь формат и выберешь подходящую
+          программу. Без обязательств.
+        </p>
+        <div class="main-sixth-form">
+          <div class="form-row">
+            <input type="text" class="form-input" placeholder="Твоё имя" />
+            <input type="tel" class="form-input" placeholder="Телефон" />
+          </div>
+          <input type="email" class="form-input" placeholder="Email" />
+          <div class="form-row">
+            <select class="form-select">
+              <option value="">Выбери язык</option>
+              <option>Английский</option>
+              <option>Немецкий</option>
+              <option>Французский</option>
+              <option>Испанский</option>
+              <option>Итальянский</option>
+              <option>Китайский</option>
+            </select>
+            <select class="form-select">
+              <option value="">Твой уровень</option>
+              <option>Нулевой</option>
+              <option>Начальный (A1–A2)</option>
+              <option>Средний (B1–B2)</option>
+              <option>Продвинутый (C1+)</option>
+            </select>
+          </div>
+          <button class="form-submit" onclick="handleTrialSubmit()">
+            ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК →
+          </button>
+          <p class="form-note">
+            Нажимая кнопку, ты соглашаешься с политикой конфиденциальности
+          </p>
+        </div>
+      </div>
+      <img class="stroke-free" src="images/stroke-free.svg" alt="" />
+      <img class="stroke-one-hour" src="images/stroke-one-hour.svg" alt="" />
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">LINGO</div>
+            <p class="footer-desc">
+              Глобальная языковая школа для людей любого возраста и
+              возможностей. Делаем языки доступными для каждого.
+            </p>
+            <div
+              style="
+                margin-top: 24px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+              "
+            >
+              <span class="footer-little-desc"
+                >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Обучение</h4>
+            <ul class="footer-links">
+              <li><a href="courses.html">Курсы</a></li>
+              <li>
+                <a href="study.html">Личный кабинет</a>
+              </li>
+              <li><a href="events.html">Ивенты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Школа</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="merch.html">Мерч</a></li>
+              <li><a href="courses.html">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Дизайн</h4>
+            <ul class="footer-links">
+              <li><a href="#">Б25ДЗ09</a></li>
+              <li>
+                <a href="https://www.behance.net/polinaklimova2"
+                  >Полина Климова</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 LINGO. Все права защищены.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📱</a>
+            <a href="#" class="social-btn">✈️</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="javascripts/change-words.js"></script>
+    <script src="javascripts/header.js"></script>
+    <script src="javascripts/carusel.js"></script>
+    <script src="javascripts/faq-free-lesson.js"></script>
   </body>
 </html>

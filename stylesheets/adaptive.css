@@ -1,0 +1,125 @@
+/* -----ШАПКА----- */
+
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -----КУРСЫ----- */
+@media (max-width: 680px) {
+  .course-first {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: clamp(22px, 6vw, 32px);
+    margin-bottom: 1rem;
+  }
+
+  .filters {
+    gap: 6px;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card-img {
+    height: 130px;
+  }
+
+  .card-img .flag {
+    font-size: 42px;
+  }
+
+  .card-body {
+    padding: 14px 14px 16px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-desc {
+    font-size: 12px;
+  }
+
+  .meta-item {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .btn-cart {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 590px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card-img {
+    height: 150px;
+  }
+
+  .card-img .flag {
+    font-size: 52px;
+  }
+
+  .card-body {
+    padding: 16px 16px 18px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+  }
+
+  .card-meta {
+    gap: 6px;
+  }
+
+  .price {
+    font-size: 17px;
+  }
+
+  .btn-cart {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+}
