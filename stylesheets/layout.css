@@ -10,6 +10,7 @@ body {
 
 :root {
   --darkblue: #1b3bff;
+  --darkblue2: #142dce;
   --blue: #3063ff;
   --blue2: #2859ff;
   --lightblue2: #3e69ff;
@@ -26,6 +27,7 @@ body {
   --grey3: #666666;
   --gray4: #f2f2f2;
   --grey5: #888888;
+  --grey6: #dddddd;
   --orange: #ff6b36;
   --red: #c41e3b;
 }
@@ -917,7 +919,7 @@ nav a.always-active {
   border-color: var(--blue);
 }
 .form-input::placeholder {
-  color: #aaa;
+  color: var(--grey5);
 }
 
 .form-select {
@@ -956,7 +958,7 @@ nav a.always-active {
 
 .form-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 71, 255, 0.4);
+  box-shadow: 0 10px 30px var(--darkblue2);
 }
 
 .form-note {
@@ -1030,6 +1032,13 @@ footer {
 }
 li {
   height: 1vw;
+}
+
+.footer-countries {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .footer-links {
@@ -1123,7 +1132,7 @@ li {
   border: 2px solid var(--gray4);
   background: var(--white);
   font-family: "InterRegular";
-  font-size: 0.8vw;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.2s;
   color: var(--grey3);
@@ -1274,7 +1283,7 @@ li {
   align-items: center;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--gray4);
   gap: 10px;
 }
 
@@ -1293,8 +1302,8 @@ li {
 }
 
 .btn-cart {
-  background: #2563eb;
-  color: #fff;
+  background: var(--darkblue);
+  color: var(--white);
   border: none;
   padding: 9px 18px;
   border-radius: 8px;
@@ -1310,17 +1319,190 @@ li {
 }
 
 .btn-cart:hover {
-  background: #1d4ed8;
+  background: var(--darkblue2);
 }
 
 .btn-cart:active {
   transform: scale(0.96);
 }
 
-.no-results {
-  grid-column: 1 / -1;
+/* <!---------------------------- МЕРЧ ------------------------------> */
+.merch-header {
+  background: var(--yellow);
+  padding: 93px 24px 52px 24px;
   text-align: center;
-  padding: 3rem;
-  color: #999;
+  position: relative;
+  overflow: hidden;
+}
+
+.merch-limitid-ver {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-family: "Unbounded";
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+  margin-bottom: 14px;
+}
+
+.merch-header-title {
+  font-family: "Unbounded";
+  font-size: 8vw;
+  line-height: 0.9;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.merch-header-sub {
+  margin-top: 1vw;
   font-size: 15px;
+  color: var(--darkyellow);
+}
+
+.stroke_unique {
+  position: absolute;
+  top: 100px;
+  left: 70vw;
+  width: 26vw;
+}
+
+.stroke_one_wave {
+  position: absolute;
+  top: 100px;
+  left: 7vw;
+  width: 22vw;
+}
+
+.merch-first {
+  padding: 0 70px 30px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-merch {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+  position: relative;
+  border: 2px solid #e8e8e8;
+}
+
+.card-merch:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+  border: 2px solid var(--darkblue);
+}
+
+.card-merch-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-merch-img.card-merch-blue {
+  background: var(--darkblue);
+}
+.card-merch-img.card-merch-black {
+  background: var(--black);
+}
+.card-merch-img.card-merch-grey {
+  background: var(--grey6);
+}
+
+.card-merch-img .emoji {
+  font-size: clamp(56px, 8vw, 80px);
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.18));
+  transition: transform 0.22s ease;
+}
+
+.card-merch:hover .emoji {
+  transform: scale(1.08);
+}
+
+.label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--white);
+  color: var(--black);
+  font-family: "InterBold";
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+.label-hit {
+  background: var(--yellow);
+  color: var(--black);
+}
+.label-sale {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.card-merch-body {
+  padding: 16px 16px 18px;
+}
+
+.card-merch-title {
+  font-family: "Unbounded";
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.card-merch-variants {
+  font-size: 12px;
+  color: var(--grey5);
+  margin-bottom: 14px;
+}
+
+.card-merch-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card-merch-price {
+  font-family: "Unbounded";
+  font-size: 16px;
+  color: var(--black);
+}
+
+.btn-cart-merch {
+  background: var(--darkblue);
+  color: var(--white);
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "InterBold";
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.btn-cart-merch:hover {
+  background: var(--darkblue2);
 }

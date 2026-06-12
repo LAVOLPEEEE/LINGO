@@ -90,27 +90,27 @@
     gap: 12px;
   }
 
-  .card-img {
+  .card-course-img {
     height: 150px;
   }
 
-  .card-img .flag {
+  .card-course-img .flag {
     font-size: 52px;
   }
 
-  .card-body {
+  .card-course-body {
     padding: 16px 16px 18px;
   }
 
-  .card-title {
+  .card-course-title {
     font-size: 17px;
   }
 
-  .card-desc {
+  .card-course-desc {
     font-size: 13px;
   }
 
-  .card-meta {
+  .card-course-meta {
     gap: 6px;
   }
 
@@ -121,5 +121,19 @@
   .btn-cart {
     padding: 9px 16px;
     font-size: 13px;
+  }
+}
+
+/* -----МЕРЧ----- */
+@media (max-width: 680px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+@media (max-width: 590px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
