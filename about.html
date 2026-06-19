@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>О школе L!NGO</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/main.js"></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html" class="active">О школе </a>
-        <a href="courses.html">Курсы</a>
-        <a href="events.html">Ивенты</a>
-        <a href="study.html">Обучение</a>
-        <a href="merch.html">Мерч</a>
-        <a href="courses.html" class="always-active">Пробный урок</a>
+        <a href="index.html" data-lang="nav.home">Главная</a>
+        <a href="about.html" class="active" data-lang="nav.about">О школе </a>
+        <a href="courses.html" data-lang="nav.courses">Курсы</a>
+        <a href="events.html" data-lang="nav.events">Ивенты</a>
+        <a href="study.html" data-lang="nav.study">Обучение</a>
+        <a href="merch.html" data-lang="nav.merch">Мерч</a>
+        <a href="courses.html" class="always-active" data-lang="nav.trial"
+          >Пробный урок</a
+        >
       </nav>
       <div class="header-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang(this)">RU</button>
-          <button class="lang-btn" onclick="setLang(this)">EN</button>
+          <button class="lang-btn active" data-lang-btn="ru">RU</button>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -33,7 +34,282 @@
         <button class="hamburger">☰</button>
       </div>
     </header>
-    <script src="javascripts/main.js"></script>
+
+    <section class="about-first">
+      <div class="about-first-left">
+        <div class="about-first-label" data-lang="about.label">Кто мы</div>
+        <h1 class="about-first-title" data-lang="about.title">Мы — Lingo</h1>
+        <p class="about-first-desc" data-lang="about.desc">
+          Глобальная языковая школа для людей любого возраста
+          и&nbsp;возможностей. Мы делаем изучение языков доступным,
+          увлекательным — независимо от уровня подготовки, физических
+          возможностей и географического положения.
+        </p>
+      </div>
+      <div class="about-first-right">
+        <div class="stat-card-about-first">
+          <div
+            class="stat-number-about-first"
+            data-lang="about.stat_cities_number"
+          >
+            50+
+          </div>
+          <div
+            class="stat-label-about-first"
+            data-lang="about.stat_cities_label"
+          >
+            Городов в России и мире
+          </div>
+        </div>
+        <div class="stat-card-about-first">
+          <div
+            class="stat-number-about-first"
+            data-lang="about.stat_langs_number"
+          >
+            12
+          </div>
+          <div
+            class="stat-label-about-first"
+            data-lang="about.stat_langs_label"
+          >
+            Языков в программе
+          </div>
+        </div>
+        <div class="stat-card-about-first">
+          <div
+            class="stat-number-about-first"
+            data-lang="about.stat_students_number"
+          >
+            30к
+          </div>
+          <div
+            class="stat-label-about-first"
+            data-lang="about.stat_students_label"
+          >
+            Учеников по всему миру
+          </div>
+        </div>
+        <div class="stat-card-about-first">
+          <div
+            class="stat-number-about-first"
+            data-lang="about.stat_graduates_number"
+          >
+            96%
+          </div>
+          <div
+            class="stat-label-about-first"
+            data-lang="about.stat_graduates_label"
+          >
+            Довольных выпускников
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-second">
+      <div class="about-second-label" data-lang="about.partners_label">
+        Партнёры
+      </div>
+      <h2 class="about-second-title" data-lang="about.partners_title">
+        С нами работают крупные компании
+      </h2>
+      <p class="about-second-desc" data-lang="about.partners_desc">
+        Наши партнёры помогают студентам найти работу, пройти стажировку и
+        применить язык на практике.
+      </p>
+      <div class="about-second-partner-logos">
+        <div class="about-second-partner-logo">
+          <img class="partner-icon1" src="images/yandex-logo.png" alt="" />
+        </div>
+        <div class="about-second-partner-logo">
+          <img class="partner-icon2" src="images/sberbank-logo.png" alt="" />
+        </div>
+        <div class="about-second-partner-logo">
+          <img class="partner-icon3" src="images/aviasales-logo.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-third">
+      <div class="about-third-label" data-lang="about.speakers_label">
+        Спикеры
+      </div>
+      <h2 class="about-third-title" data-lang="about.speakers_title">
+        Учись у лучших
+      </h2>
+      <div class="about-third-grid">
+        <div class="about-third-card">
+          <div class="about-third-avatar">👨🏻</div>
+          <div class="about-third-name" data-lang="about.speaker1_name">
+            Джон Смит
+          </div>
+          <div class="about-third-role" data-lang="about.speaker1_role">
+            Носитель языка, Кембридж
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">👩🏻‍🦰</div>
+          <div class="about-third-name" data-lang="about.speaker2_name">
+            Лана Дель Рей
+          </div>
+          <div class="about-third-role" data-lang="about.speaker2_role">
+            Носитель языка, Оксфорд
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">👩🏻‍🦱‍</div>
+          <div class="about-third-name" data-lang="about.speaker3_name">
+            Мария Мироничева
+          </div>
+          <div class="about-third-role" data-lang="about.speaker3_role">
+            Носитель языка, Гарвард
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">👩🏼</div>
+          <div class="about-third-name" data-lang="about.speaker4_name">
+            Полина Климова
+          </div>
+          <div class="about-third-role" data-lang="about.speaker4_role">
+            Носитель языка, Оксфорд
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">🧑🏻‍🦱</div>
+          <div class="about-third-name" data-lang="about.speaker5_name">
+            Дмитрий Шустов
+          </div>
+          <div class="about-third-role" data-lang="about.speaker5_role">
+            Носитель языка, Оксфорд
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">👨🏼</div>
+          <div class="about-third-name" data-lang="about.speaker6_name">
+            HTML Сиесесович
+          </div>
+          <div class="about-third-role" data-lang="about.speaker6_role">
+            Носитель языка, Кембридж
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">🧑🏼‍🦱</div>
+          <div class="about-third-name" data-lang="about.speaker7_name">
+            Костя Ночь
+          </div>
+          <div class="about-third-role" data-lang="about.speaker7_role">
+            Носитель языка, Стенфорд
+          </div>
+        </div>
+
+        <div class="about-third-card">
+          <div class="about-third-avatar">👩🏻</div>
+          <div class="about-third-name" data-lang="about.speaker8_name">
+            Валерия Антонихина
+          </div>
+          <div class="about-third-role" data-lang="about.speaker8_role">
+            Носитель языка, Гарвард
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-forth">
+      <div class="about-forth-box">
+        <h2 class="about-forth-title" data-lang="about.cta_title">
+          Присоединяйся к LINGO
+        </h2>
+        <p class="about-forth-sub" data-lang="about.cta_sub">
+          Пробный урок бесплатно. Никаких обязательств — только хорошее
+          настроение.
+        </p>
+        <a href="404.html" class="about-forth-btn" data-lang="about.cta_btn"
+          >Записаться на пробный урок →</a
+        >
+      </div>
+      <img
+        class="about-forth-stroke-free"
+        src="images/stroke-free-2.svg.svg"
+        alt=""
+      />
+      <img
+        class="about-forth-stroke-one-hour"
+        src="images/stroke-one-hour-2.svg"
+        alt=""
+      />
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">LINGO</div>
+            <p class="footer-desc" data-lang="footer.desc">
+              Глобальная языковая школа для людей любого возраста и
+              возможностей. Делаем языки доступными для каждого.
+            </p>
+            <div class="footer-countries">
+              <span class="footer-little-desc" data-lang="footer.cities"
+                >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col1-title">Обучение</h4>
+            <ul class="footer-links">
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+              <li>
+                <a href="study.html" data-lang="footer.cabinet"
+                  >Личный кабинет</a
+                >
+              </li>
+              <li><a href="events.html" data-lang="nav.events">Ивенты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col2-title">Школа</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="about.html" data-lang="footer.about-us">О нас</a>
+              </li>
+              <li><a href="merch.html" data-lang="nav.merch">Мерч</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col3-title">Дизайн</h4>
+            <ul class="footer-links">
+              <li><a href="#">Б25ДЗ09</a></li>
+              <li>
+                <a href="https://www.behance.net/polinaklimova2"
+                  >Полина Климова</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy" data-lang="footer.copy">
+            © 2026 LINGO. Все права защищены.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📱</a>
+            <a href="#" class="social-btn">✈️</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="javascripts/localization.js"></script>
     <script src="javascripts/header.js"></script>
+    <script src="javascripts/cart.js"></script>
   </body>
 </html>

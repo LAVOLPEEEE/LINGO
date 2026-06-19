@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мерч</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/main.js"></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О школе </a>
-        <a href="courses.html">Курсы</a>
-        <a href="events.html">Ивенты</a>
-        <a href="study.html">Обучение</a>
-        <a href="merch.html" class="active">Мерч</a>
-        <a href="courses.html" class="always-active">Пробный урок</a>
+        <a href="index.html" data-lang="nav.home">Главная</a>
+        <a href="about.html" data-lang="nav.about">О школе </a>
+        <a href="courses.html" data-lang="nav.courses">Курсы</a>
+        <a href="events.html" data-lang="nav.events">Ивенты</a>
+        <a href="study.html" data-lang="nav.study">Обучение</a>
+        <a href="merch.html" class="active" data-lang="nav.merch">Мерч</a>
+        <a href="courses.html" class="always-active" data-lang="nav.trial"
+          >Пробный урок</a
+        >
       </nav>
       <div class="header-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang(this)">RU</button>
-          <button class="lang-btn" onclick="setLang(this)">EN</button>
+          <button class="lang-btn active" data-lang-btn="ru">RU</button>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -36,149 +37,298 @@
 
     <section class="merch-header">
       <div class="merch-limitid-ver">#LIMITID VER.</div>
-      <h1 class="merch-header-title">МЕРЧ</h1>
-      <p class="merch-header-sub">Носи LINGO — показывай, что ты в теме</p>
-      <img class="stroke_one_wave" src="images/stroke_one_wave.svg" alt="" />
-      <img class="stroke_unique" src="images/stroke_unique.svg" alt="" />
+      <h1 class="merch-header-title" data-lang="merch-header.title">МЕРЧ</h1>
+      <p class="merch-header-sub" data-lang="merch-header.sub">
+        Носи LINGO — показывай, что ты в теме
+      </p>
+      <img
+        class="stroke_one_wave"
+        data-lang-img="stroke_one_wave.blue"
+        src="images/stroke_one_wave_ru.svg"
+        alt=""
+      />
+      <img
+        class="stroke_unique"
+        data-lang-img="stroke_unique.blue"
+        src="images/stroke_unique_ru.svg"
+        alt=""
+      />
     </section>
 
     <section class="merch-first">
       <div class="filters" id="filters">
-        <button class="filter-btn active" data-filter="all">Все</button>
-        <button class="filter-btn" data-filter="hit">ХИТ</button>
-        <button class="filter-btn" data-filter="sale">СКИДКА 50%</button>
-        <button class="filter-btn" data-filter="clothes">ОДЕЖДА</button>
+        <button
+          class="filter-btn active"
+          data-filter="all"
+          data-lang="merch-filter.all"
+        >
+          Все
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="hit"
+          data-lang="merch-filter.hit"
+        >
+          ХИТ
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="sale"
+          data-lang="merch-filter.discount"
+        >
+          СКИДКА 50%
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="clothes"
+          data-lang="merch-filter.clothes"
+        >
+          ОДЕЖДА
+        </button>
       </div>
 
       <div class="grid2" id="grid2">
-        <div class="card-merch" data-tags="hit clothes">
+        <div
+          class="card-merch"
+          data-tags="hit clothes"
+          data-merch-name="merch-tshirt-classic"
+        >
           <div class="card-merch-img card-merch-blue">
             <span class="emoji">👕</span>
-            <span class="label label-hit">ХИТ</span>
+            <span class="label label-hit" data-lang="merch-filter.hit"
+              >ХИТ</span
+            >
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Футболка LINGO Classic</div>
-            <div class="card-merch-variants">+ 12 расцветок</div>
+            <div
+              class="card-merch-title"
+              data-lang="merch-tshirt-classic.title"
+            >
+              Футболка LINGO Classic
+            </div>
+            <div
+              class="card-merch-variants"
+              data-lang="merch-tshirt-classic.variants"
+            >
+              + 12 расцветок
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">2 200 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span
+                class="card-merch-price"
+                data-lang="merch-tshirt-classic.price"
+                >2 200 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="hit">
+        <div class="card-merch" data-tags="hit" data-merch-name="merch-cap">
           <div class="card-merch-img card-merch-black">
             <span class="emoji">🧢</span>
-            <span class="label label-hit">ХИТ</span>
+            <span class="label label-hit" data-lang="merch-filter.hit"
+              >ХИТ</span
+            >
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Кепка LINGO Logo</div>
-            <div class="card-merch-variants">+ 5 расцветок</div>
+            <div data-lang="merch-cap.title" class="card-merch-title">
+              Кепка LINGO Logo
+            </div>
+            <div data-lang="merch-cap.variants" class="card-merch-variants">
+              + 5 расцветок
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">1 800 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-cap.price" class="card-merch-price"
+                >1 800 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="">
+        <div class="card-merch" data-tags="" data-merch-name="merch-cup">
           <div class="card-merch-img card-merch-grey">
             <span class="emoji">☕</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Кружка «Speak Up»</div>
-            <div class="card-merch-variants">+ 2 расцветки</div>
+            <div data-lang="merch-cup.title" class="card-merch-title">
+              Кружка «Speak Up»
+            </div>
+            <div data-lang="merch-cup.variants" class="card-merch-variants">
+              + 2 расцветки
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">990 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-cup.price" class="card-merch-price"
+                >990 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="clothes">
+        <div
+          class="card-merch"
+          data-tags="clothes"
+          data-merch-name="merch-hoody"
+        >
           <div class="card-merch-img card-merch-blue">
             <span class="emoji">🧸</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Худи LINGO Oversized</div>
-            <div class="card-merch-variants">+ 3 расцветки</div>
+            <div data-lang="merch-hoody.title" class="card-merch-title">
+              Худи LINGO Oversized
+            </div>
+            <div data-lang="merch-hoody.variants" class="card-merch-variants">
+              + 3 расцветки
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">5 900 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-hoody.price" class="card-merch-price"
+                >5 900 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="sale">
+        <div
+          class="card-merch"
+          data-tags="sale"
+          data-merch-name="merch-shopper"
+        >
           <div class="card-merch-img card-merch-black">
             <span class="emoji">🛍️</span>
             <span class="label label-sale">-50%</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Шопер LINGO Eco</div>
-            <div class="card-merch-variants">+ 2 расцветки</div>
+            <div data-lang="merch-shopper.title" class="card-merch-title">
+              Шопер LINGO Eco
+            </div>
+            <div data-lang="merch-shopper.variants" class="card-merch-variants">
+              + 2 расцветки
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">750 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-shopper.price" class="card-merch-price"
+                >750 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="sale">
+        <div
+          class="card-merch"
+          data-tags="sale"
+          data-merch-name="merch-notebook"
+        >
           <div class="card-merch-img card-merch-grey">
             <span class="emoji">📓</span>
             <span class="label label-sale">-50%</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Блокнот LINGO A5</div>
-            <div class="card-merch-variants">+ 2 расцветки</div>
+            <div data-lang="merch-notebook.title" class="card-merch-title">
+              Блокнот LINGO A5
+            </div>
+            <div
+              data-lang="merch-notebook.variants"
+              class="card-merch-variants"
+            >
+              + 2 расцветки
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">650 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-notebook.price" class="card-merch-price"
+                >650 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="clothes sale">
+        <div
+          class="card-merch"
+          data-tags="clothes sale"
+          data-merch-name="merch-jacket"
+        >
           <div class="card-merch-img card-merch-blue">
             <span class="emoji">🧥</span>
             <span class="label label-sale">-50%</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Ветровка LINGO Shell</div>
-            <div class="card-merch-variants">+ 4 расцветки</div>
+            <div data-lang="merch-jacket.title" class="card-merch-title">
+              Ветровка LINGO Shell
+            </div>
+            <div data-lang="merch-jacket.variants" class="card-merch-variants">
+              + 4 расцветки
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">3 950 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-jacket.price" class="card-merch-price"
+                >3 950 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="hit clothes">
+        <div
+          class="card-merch"
+          data-tags="hit clothes"
+          data-merch-name="merch-shorts"
+        >
           <div class="card-merch-img card-merch-black">
             <span class="emoji">🩳</span>
-            <span class="label label-hit">ХИТ</span>
+            <span class="label label-hit" data-lang="merch-filter.hit"
+              >ХИТ</span
+            >
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Шорты LINGO Summer</div>
-            <div class="card-merch-variants">+ 6 расцветок</div>
+            <div data-lang="merch-shorts.title" class="card-merch-title">
+              Шорты LINGO Summer
+            </div>
+            <div data-lang="merch-shorts.variants" class="card-merch-variants">
+              + 6 расцветок
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">2 700 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-shorts.price" class="card-merch-price"
+                >2 700 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="card-merch" data-tags="">
+        <div class="card-merch" data-tags="" data-merch-name="merch-pen">
           <div class="card-merch-img card-merch-grey">
             <span class="emoji">🖊️</span>
           </div>
           <div class="card-merch-body">
-            <div class="card-merch-title">Ручка LINGO Pack</div>
-            <div class="card-merch-variants">3 штуки в наборе</div>
+            <div data-lang="merch-pen.title" class="card-merch-title">
+              Ручка LINGO Pack
+            </div>
+            <div data-lang="merch-pen.variants" class="card-merch-variants">
+              3 штуки в наборе
+            </div>
             <div class="card-merch-footer">
-              <span class="card-merch-price">350 ₽</span>
-              <button class="btn-cart-merch">В корзину</button>
+              <span data-lang="merch-pen.price" class="card-merch-price"
+                >350 ₽</span
+              >
+              <button class="btn-cart-merch" data-lang="course-button-cart-add">
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -242,9 +392,13 @@
       </div>
     </footer>
 
+    <script src="javascripts/load-cart.js"></script>
+
+    <script type="module" src="javascripts/localization.js"></script>
     <script src="javascripts/cart.js"></script>
+    <script src="javascripts/cart-course.js"></script>
+    <script src="javascripts/cart-merch.js"></script>
     <script src="javascripts/filter-for-merch.js"></script>
-    <script src="javascripts/main.js"></script>
     <script src="javascripts/header.js"></script>
   </body>
 </html>

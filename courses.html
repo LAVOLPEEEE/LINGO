@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курсы</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/main.js"></script>
   </head>
   <body>
     <header>
@@ -37,16 +36,54 @@
     </header>
 
     <section class="course-first">
-      <div class="course-first-label">КУРСЫ</div>
-      <div class="course-first-title">Выбери свой язык</div>
+      <div class="course-first-label" data-lang="course-caps">КУРСЫ</div>
+      <div class="course-first-title" data-lang="course-choose-language">
+        Выбери свой язык
+      </div>
 
       <div class="filters" id="filters">
-        <button class="filter-btn active" data-filter="all">Все</button>
-        <button class="filter-btn" data-filter="english">Английский</button>
-        <button class="filter-btn" data-filter="german">Немецкий</button>
-        <button class="filter-btn" data-filter="french">Французский</button>
-        <button class="filter-btn" data-filter="spanish">Испанский</button>
-        <button class="filter-btn" data-filter="chinese">Китайский</button>
+        <button
+          class="filter-btn active"
+          data-filter="all"
+          data-lang="course-language-all"
+        >
+          Все
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="english"
+          data-lang="course-language-english"
+        >
+          Английский
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="german"
+          data-lang="course-language-german"
+        >
+          Немецкий
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="french"
+          data-lang="course-language-french"
+        >
+          Французский
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="spanish"
+          data-lang="course-language-spanish"
+        >
+          Испанский
+        </button>
+        <button
+          class="filter-btn"
+          data-filter="chinese"
+          data-lang="course-language-chinese"
+        >
+          Китайский
+        </button>
       </div>
 
       <div class="grid" id="grid">
@@ -60,19 +97,44 @@
             <p class="level-label">A1–C1</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Английский</div>
-            <div class="card-course-title">Английский для жизни</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-english-life.label">
+              Английский
+            </div>
+            <div
+              class="card-course-title"
+              data-lang="course-english-life.title"
+            >
+              Английский для жизни
+            </div>
+            <div class="card-course-desc" data-lang="course-english-life.desc">
               Полный курс с нуля до уверенного общения. Разговорный язык,
               грамматика, произношение.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 3 раза/нед</span>
-              <span class="meta-item">👥 до 8 чел</span>
-              <span class="meta-item">⏱️ 6 мес</span>
+              <span class="meta-item"
+                >📅
+                <span data-lang="course-english-life.period"
+                  >3 раза/нед</span
+                ></span
+              >
+              <span class="meta-item"
+                >👥
+                <span data-lang="course-english-life.people"
+                  >до 8 чел</span
+                ></span
+              >
+              <span class="meta-item"
+                >⏱️
+                <span data-lang="course-english-life.duration"
+                  >6 мес</span
+                ></span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <div class="price">
+                <span data-lang="course-english-life.price">4 900 ₽ </span>
+                <span data-lang="course-price-mouth">/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -119,18 +181,32 @@
             <p class="level-label">A1–B2</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Немецкий</div>
-            <div class="card-course-title">Немецкий с нуля</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-german.label">
+              Немецкий
+            </div>
+            <div class="card-course-title" data-lang="course-german.title">
+              Немецкий с нуля
+            </div>
+            <div class="card-course-desc" data-lang="course-german.desc">
               Системный подход к немецкому: от алфавита до свободного общения.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 2 раза/нед</span>
-              <span class="meta-item">👥 до 8 чел</span>
-              <span class="meta-item">⏱️ 8 мес</span>
+              <span class="meta-item"
+                >📅
+                <span data-lang="course-german.period">2 раза/нед</span></span
+              >
+              <span class="meta-item"
+                >👥 <span data-lang="course-german.people">до 8 чел</span></span
+              >
+              <span class="meta-item"
+                >⏱️
+                <span data-lang="course-german.duration"> 8 мес </span></span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">5 200 ₽ <span>/мес</span></div>
+              <div class="price" data-lang="course-german.price">
+                5 200 ₽ <span>/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -148,18 +224,33 @@
             <p class="level-label">A1–C1</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Французский</div>
-            <div class="card-course-title">Разговорный французский</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-french.label">
+              Французский
+            </div>
+            <div class="card-course-title" data-lang="course-french.title">
+              Разговорный французский
+            </div>
+            <div class="card-course-desc" data-lang="course-french.desc">
               Живой разговорный французский: акцент на произношении и культуре.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 2 раза/нед</span>
-              <span class="meta-item">👥 до 8 чел</span>
-              <span class="meta-item">⏱️ 6 мес</span>
+              <span class="meta-item"
+                >📅
+                <span data-lang="course-french.period">2 раза/нед</span></span
+              >
+              <span class="meta-item"
+                >👥
+                <span data-lang="course-french.people"> до 8 чел</span></span
+              >
+              <span class="meta-item"
+                >⏱️
+                <span data-lang="course-french.duration"> 6 мес </span></span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <div class="price" data-lang="course-french.price">
+                4 900 ₽ <span>/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -176,19 +267,36 @@
             <p class="level-label">B1+</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Испанский</div>
-            <div class="card-course-title">Испанский для жизни</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-spanish.label">
+              Испанский
+            </div>
+            <div class="card-course-title" data-lang="course-spanish.title">
+              Испанский для жизни
+            </div>
+            <div class="card-course-desc" data-lang="course-spanish.desc">
               Испанский через культуру: музыка, кино, путешествия. Заговоришь
               быстро.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 3 раза/нед</span>
-              <span class="meta-item">👥 до 8 чел</span>
-              <span class="meta-item">⏱️ 5 мес</span>
+              <span class="meta-item"
+                >📅
+                <span data-lang="course-spanish.period">
+                  3 раза/нед
+                </span></span
+              >
+              <span class="meta-item"
+                >👥
+                <span data-lang="course-spanish.people"> до 8 чел</span></span
+              >
+              <span class="meta-item"
+                >⏱️
+                <span data-lang="course-spanish.duration"> 5 мес</span></span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">4 900 ₽ <span>/мес</span></div>
+              <div class="price" data-lang="course-spanish.price">
+                4 900 ₽ <span>/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -206,19 +314,34 @@
             <p class="level-label">A1–B2</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Китайский</div>
-            <div class="card-course-title">Китайский с нуля</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-chinese.label">
+              Китайский
+            </div>
+            <div class="card-course-title" data-lang="course-chinese.title">
+              Китайский с нуля
+            </div>
+            <div class="card-course-desc" data-lang="course-chinese.desc">
               Мандаринский китайский: иероглифы, тоны, разговорный язык и
               письмо.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 3 раза/нед</span>
-              <span class="meta-item">👥 до 6 чел</span>
-              <span class="meta-item">⏱️ 10 мес</span>
+              <span class="meta-item"
+                >📅
+                <span data-lang="course-chinese.period">3 раза/нед</span></span
+              >
+              <span class="meta-item"
+                >👥
+                <span data-lang="course-chinese.people">до 6 чел</span></span
+              >
+              <span class="meta-item"
+                >⏱️
+                <span data-lang="course-chinese.duration">10 мес</span></span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">5 800 ₽ <span>/мес</span></div>
+              <div class="price" data-lang="course-chinese.price">
+                5 800 ₽ <span>/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -228,9 +351,209 @@
       </div>
     </section>
 
-    <script src="javascripts/filter.js"></script>
+    <section class="course-second">
+      <span class="course-second-lable" data-lang="course-second.lable"
+        >Первый шаг</span
+      >
+
+      <h1 class="course-second-title" data-lang="course-second.title">
+        Пройди тест
+      </h1>
+
+      <p class="course-second-sub" data-lang="course-second.sub">
+        Узнай свой уровень знания языка, чтобы тебе легче было выбрать курс
+      </p>
+
+      <div class="course-second-lang-list" aria-label="Выбор языка">
+        <a
+          href="404.html"
+          class="course-second-lang-btn"
+          aria-label="Пройти тест по английскому языку"
+        >
+          <span
+            class="course-second-lang-name"
+            data-lang="course-second.english"
+            >Английский</span
+          >
+          <span class="course-second-lang-arrow">
+            <img
+              class="course-second-stroke"
+              src="images/stroke.svg"
+              alt=""
+            /> </span
+        ></a>
+
+        <a
+          href="404.html"
+          class="course-second-lang-btn"
+          aria-label="Пройти тест по французскому языку"
+        >
+          <span class="course-second-lang-name" data-lang="course-second.french"
+            >Французский</span
+          >
+          <span class="course-second-lang-arrow">
+            <img
+              class="course-second-stroke"
+              src="images/stroke.svg"
+              alt=""
+            /> </span
+        ></a>
+
+        <a
+          href="404.html"
+          class="course-second-lang-btn"
+          aria-label="Пройти тест по немецкому языку"
+        >
+          <span class="course-second-lang-name" data-lang="course-second.german"
+            >Немецкий</span
+          >
+          <span class="course-second-lang-arrow">
+            <img
+              class="course-second-stroke"
+              src="images/stroke.svg"
+              alt=""
+            /> </span
+        ></a>
+      </div>
+    </section>
+
+    <section id="free-lesson" class="main-sixth">
+      <div class="free-lesson-inner">
+        <span class="main-sixth-label" data-lang="course-third.label"
+          >Второй шаг</span
+        >
+        <h2 class="main-sixth-title" data-lang="main-sixth.title">
+          Пробный урок бесплатно
+        </h2>
+        <p class="main-sixth-des" data-lang="main-sixth.description">
+          Познакомишься с преподавателем, поймёшь формат и выберешь подходящую
+          программу. Без обязательств.
+        </p>
+        <div class="main-sixth-form">
+          <div class="form-row">
+            <input
+              type="text"
+              class="form-input"
+              data-lang-placeholder="main-sixth.name"
+              placeholder="Твоё имя"
+            />
+            <input
+              type="tel"
+              class="form-input"
+              data-lang-placeholder="main-sixth.phone"
+              placeholder="Телефон"
+            />
+          </div>
+          <input
+            type="email"
+            class="form-input"
+            data-lang-placeholder="main-sixth.email"
+            placeholder="Email"
+          />
+          <div class="form-row">
+            <select class="form-select">
+              <option value="" data-lang="main-sixth.select-lang">
+                Выбери язык
+              </option>
+              <option data-lang="main-first.english">Английский</option>
+              <option data-lang="main-first.german">Немецкий</option>
+              <option data-lang="main-first.french">Французский</option>
+              <option data-lang="main-first.spanish">Испанский</option>
+              <option data-lang="main-first.italian">Итальянский</option>
+              <option data-lang="main-first.chinese">Китайский</option>
+            </select>
+            <select class="form-select">
+              <option value="" data-lang="main-sixth.select-level">
+                Твой уровень
+              </option>
+              <option data-lang="main-sixth.level-zero">Нулевой</option>
+              <option data-lang="main-sixth.level-beginner">
+                Начальный (A1–A2)
+              </option>
+              <option data-lang="main-sixth.level-intermediate">
+                Средний (B1–B2)
+              </option>
+              <option data-lang="main-sixth.level-advanced">
+                Продвинутый (C1+)
+              </option>
+            </select>
+          </div>
+          <a href="404.html" class="form-submit" data-lang="main-sixth.submit"
+            >ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК →</a
+          >
+          <p class="form-note" data-lang="main-sixth.note">
+            Нажимая кнопку, ты соглашаешься с политикой конфиденциальности
+          </p>
+        </div>
+      </div>
+      <img class="stroke-free" src="images/stroke-free.svg" alt="" />
+      <img class="stroke-one-hour" src="images/stroke-one-hour.svg" alt="" />
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">LINGO</div>
+            <p class="footer-desc">
+              Глобальная языковая школа для людей любого возраста и
+              возможностей. Делаем языки доступными для каждого.
+            </p>
+            <div class="footer-countries">
+              <span class="footer-little-desc"
+                >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Обучение</h4>
+            <ul class="footer-links">
+              <li><a href="courses.html">Курсы</a></li>
+              <li>
+                <a href="study.html">Личный кабинет</a>
+              </li>
+              <li><a href="events.html">Ивенты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Школа</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="merch.html">Мерч</a></li>
+              <li><a href="courses.html">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Дизайн</h4>
+            <ul class="footer-links">
+              <li><a href="#">Б25ДЗ09</a></li>
+              <li>
+                <a href="https://www.behance.net/polinaklimova2"
+                  >Полина Климова</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 LINGO. Все права защищены.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📱</a>
+            <a href="#" class="social-btn">✈️</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="javascripts/load-cart.js"></script>
+
+    <script src="javascripts/filter-for-courses.js"></script>
     <script src="javascripts/header.js"></script>
-    <script src="javascripts/localization.js"></script>
+    <script src="javascripts/cart-course.js"></script>
     <script src="javascripts/cart.js"></script>
+    <script src="javascripts/cart-merch.js"></script>
+    <script type="module" src="javascripts/localization.js"></script>
   </body>
 </html>

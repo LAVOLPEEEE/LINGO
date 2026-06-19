@@ -3,26 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Приложение</title>
+    <title>Обучение</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/main.js"></script>
   </head>
+
   <body>
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О школе </a>
-        <a href="courses.html">Курсы</a>
-        <a href="events.html">Ивенты</a>
-        <a href="study.html" class="active">Обучение</a>
-        <a href="merch.html">Мерч</a>
-        <a href="courses.html" class="always-active">Пробный урок</a>
+        <a href="index.html" data-lang="nav.home">Главная</a>
+        <a href="about.html" data-lang="nav.about">О школе </a>
+        <a href="courses.html" data-lang="nav.courses">Курсы</a>
+        <a href="events.html" data-lang="nav.events">Ивенты</a>
+        <a href="study.html" class="active" data-lang="nav.study">Обучение</a>
+        <a href="merch.html" data-lang="nav.merch">Мерч</a>
+        <a href="courses.html" class="always-active" data-lang="nav.trial"
+          >Пробный урок</a
+        >
       </nav>
       <div class="header-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang(this)">RU</button>
-          <button class="lang-btn" onclick="setLang(this)">EN</button>
+          <button class="lang-btn active" data-lang-btn="ru">RU</button>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -33,7 +35,299 @@
         <button class="hamburger">☰</button>
       </div>
     </header>
-    <script src="javascripts/main.js"></script>
+
+    <section class="study-first">
+      <div class="study-first-label" data-lang="study-first.label">
+        Обучение
+      </div>
+      <h2 class="study-first-title" data-lang="study-first.title">
+        Как это работает
+      </h2>
+      <p class="study-first-sub" data-lang="study-first.sub">
+        Всё, что тебе нужно — в одном месте. Никаких лишних шагов.
+      </p>
+
+      <div class="study-first-grid">
+        <div class="study-first-card study-card-blue">
+          <span class="study-first-card-num">01</span>
+          <div class="study-first-card-icon">🎯</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-first-card.title"
+          >
+            Тест на уровень
+          </div>
+          <p class="study-first-card-text" data-lang="study-first-card.text">
+            Проходишь 15-минутный тест — определяем уровень, подбираем программу
+            и группу. Точно и быстро.
+          </p>
+        </div>
+
+        <div class="study-first-card study-card-yellow">
+          <span class="study-first-card-num">02</span>
+          <div class="study-first-card-icon">📚</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-second-card.title"
+          >
+            Живые уроки
+          </div>
+          <p class="study-first-card-text" data-lang="study-second-card.text">
+            Занятия с преподавателем 2–3 раза в неделю. Онлайн или офлайн —
+            выбираешь сам перед каждым уроком.
+          </p>
+        </div>
+
+        <div class="study-first-card study-card-grey">
+          <span class="study-first-card-num">03</span>
+          <div class="study-first-card-icon">📱</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-third-card.title"
+          >
+            Личный кабинет
+          </div>
+          <p class="study-first-card-text" data-lang="study-third-card.text">
+            Домашние задания, видеозаписи уроков, словарный тренажёр и трекер
+            прогресса. Всё в приложении — 24/7.
+          </p>
+        </div>
+
+        <div class="study-first-card study-card-black">
+          <span class="study-first-card-num">04</span>
+          <div class="study-first-card-icon">🎪</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-forth-card.title"
+          >
+            Разговорные клубы и ивенты
+          </div>
+          <p class="study-first-card-text" data-lang="study-forth-card.text">
+            Каждый месяц — закрытые мероприятия для студентов. Практика языка в
+            живой среде ускоряет прогресс в разы.
+          </p>
+        </div>
+
+        <div class="study-first-card study-card-blue">
+          <span class="study-first-card-num">05</span>
+          <div class="study-first-card-icon">🏆</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-fifth-card.title"
+          >
+            Международный сертификат
+          </div>
+          <p class="study-first-card-text" data-lang="study-fifth-card.text">
+            IELTS, TOEFL, DELF, DELE, Goethe-Zertifikat — подготовка и помощь в
+            сдаче международных экзаменов включена в продвинутые программы.
+          </p>
+        </div>
+
+        <div class="study-first-card study-card-yellow">
+          <span class="study-first-card-num">06</span>
+          <div class="study-first-card-icon">🌍</div>
+          <div
+            class="study-first-card-title"
+            data-lang="study-sixth-card.title"
+          >
+            Комьюнити навсегда
+          </div>
+          <p class="study-first-card-text" data-lang="study-sixth-card.twxt">
+            Выпускники LINGO — это сообщество на всю жизнь. Встречи, события,
+            нетворкинг по всему миру.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="study-second">
+      <div class="study-second-section">
+        <div class="study-second-inner">
+          <div>
+            <div class="study-second-label" data-lang="study-second.label">
+              Верный помощник
+            </div>
+            <h2 class="study-second-title" data-lang="study-second.title">
+              Личный кабинет
+            </h2>
+            <p class="study-second-sub" data-lang="study-second.sub">
+              Твой центр управления обучением. Доступен с любого устройства в
+              любое время.
+            </p>
+
+            <div class="study-second-list">
+              <div class="study-second-item">
+                <div class="study-second-icon">📅</div>
+                <div>
+                  <div
+                    class="study-second-name"
+                    data-lang="study-first-list.title"
+                  >
+                    Расписание и запись
+                  </div>
+                  <div
+                    class="study-second-desc"
+                    data-lang="study-first-list.desc"
+                  >
+                    Выбирай удобный слот за неделю вперёд. Урок переносится —
+                    уведомление сразу в кабинет.
+                  </div>
+                </div>
+              </div>
+              <div class="study-second-item">
+                <div class="study-second-icon">🎬</div>
+                <div>
+                  <div
+                    class="study-second-name"
+                    data-lang="study-second-list.title"
+                  >
+                    Записи уроков
+                  </div>
+                  <div
+                    class="study-second-desc"
+                    data-lang="study-second-list.desc"
+                  >
+                    Пропустил — посмотришь запись. Хочешь повторить тему — всё
+                    сохранено.
+                  </div>
+                </div>
+              </div>
+              <div class="study-second-item">
+                <div class="study-second-icon">✏️</div>
+                <div>
+                  <div
+                    class="study-second-name"
+                    data-lang="study-third-list.title"
+                  >
+                    Домашние задания
+                  </div>
+                  <div
+                    class="study-second-desc"
+                    data-lang="study-third-list.desc"
+                  >
+                    Задания отправляет преподаватель, обратная связь — в тот же
+                    день.
+                  </div>
+                </div>
+              </div>
+              <div class="study-second-item">
+                <div class="study-second-icon">📈</div>
+                <div>
+                  <div
+                    class="study-second-name"
+                    data-lang="study-forth-list.title"
+                  >
+                    Прогресс и аналитика
+                  </div>
+                  <div
+                    class="study-second-desc"
+                    data-lang="study-forth-list.desc"
+                  >
+                    Видишь динамику по грамматике, словарю и разговорным навыкам
+                    в графиках.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="study_second_card"
+        src="images/study_second_card.svg"
+        alt=""
+      />
+    </section>
+
+    <section class="study-third">
+      <div class="study-third-box">
+        <h2 class="study-third-title" data-lang="about.cta_title">
+          Присоединяйся к LINGO
+        </h2>
+        <p class="study-third-sub" data-lang="about.cta_sub">
+          Пробный урок бесплатно. Никаких обязательств — только хорошее
+          настроение.
+        </p>
+        <a href="404.html" class="study-third-btn" data-lang="about.cta_btn"
+          >Записаться на пробный урок →</a
+        >
+      </div>
+      <img
+        class="about-forth-stroke-free"
+        src="images/stroke-free-2.svg.svg"
+        alt=""
+      />
+      <img
+        class="about-forth-stroke-one-hour"
+        src="images/stroke-one-hour-2.svg"
+        alt=""
+      />
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">LINGO</div>
+            <p class="footer-desc" data-lang="footer.desc">
+              Глобальная языковая школа для людей любого возраста и
+              возможностей. Делаем языки доступными для каждого.
+            </p>
+            <div class="footer-countries">
+              <span class="footer-little-desc" data-lang="footer.cities"
+                >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col1-title">Обучение</h4>
+            <ul class="footer-links">
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+              <li>
+                <a href="study.html" data-lang="footer.cabinet"
+                  >Личный кабинет</a
+                >
+              </li>
+              <li><a href="events.html" data-lang="nav.events">Ивенты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col2-title">Школа</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="about.html" data-lang="footer.about-us">О нас</a>
+              </li>
+              <li><a href="merch.html" data-lang="nav.merch">Мерч</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col3-title">Дизайн</h4>
+            <ul class="footer-links">
+              <li><a href="#">Б25ДЗ09</a></li>
+              <li>
+                <a href="https://www.behance.net/polinaklimova2"
+                  >Полина Климова</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy" data-lang="footer.copy">
+            © 2026 LINGO. Все права защищены.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📱</a>
+            <a href="#" class="social-btn">✈️</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="javascripts/header.js"></script>
+    <script type="module" src="javascripts/localization.js"></script>
   </body>
 </html>

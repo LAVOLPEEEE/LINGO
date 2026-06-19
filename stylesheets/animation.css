@@ -42,3 +42,10 @@
     transform: translateX(-50%);
   }
 }
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

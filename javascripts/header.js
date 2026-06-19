@@ -8,16 +8,18 @@ function setActive(element) {
   element.classList.add("active");
 }
 
-function setLang(button) {
-  let buttons = document.querySelectorAll(".lang-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const cartButton = document.querySelector(".cart-btn");
 
-  buttons.forEach(function (btn) {
-    btn.classList.remove("active");
-  });
-
-  button.classList.add("active");
-}
+  cartButton.addEventListener("click", openCart);
+});
 
 function openCart() {
-  alert("Корзина открыта");
+  const cart = document.getElementById("cart-container");
+
+  if (!cart) {
+    return;
+  }
+
+  cart.classList.remove("hidden");
 }

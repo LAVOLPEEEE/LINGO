@@ -1,42 +1,44 @@
+import { getCurrentTranslation } from "../javascripts/localization.js";
+
 const cards = [
   {
-    date: "22.06.26",
-    tag: "#EnglishDay",
-    title: "English Day в Москве",
-    desc: "Целый день только на английском — с лекциями, воркшопами и вечеринкой.",
-    seats: "45 мест",
+    date: "card.event1.date",
+    tag: "card.event1.tag",
+    title: "card.event1.title",
+    desc: "card.event1.desc",
+    seats: "card.event1.seats",
     emoji: "🔥",
   },
   {
-    date: "30.06.26",
-    tag: "Игры",
-    title: "Игры на английском",
-    desc: "Квиз, ролевые игры и дебаты — всё на языке, всё весело.",
-    seats: "12 мест",
+    date: "card.event2.date",
+    tag: "card.event2.tag",
+    title: "card.event2.title",
+    desc: "card.event2.desc",
+    seats: "card.event2.seats",
     emoji: "🎮",
   },
   {
-    date: "03.07.26",
-    tag: "Работа в команде",
-    title: "Бизнес-симуляция",
-    desc: "Разыгрываем деловые переговоры и презентации — на английском.",
-    seats: "8 мест",
+    date: "card.event3.date",
+    tag: "card.event3.tag",
+    title: "card.event3.title",
+    desc: "card.event3.desc",
+    seats: "card.event3.seats",
     emoji: "🤝",
   },
   {
-    date: "15.07.26",
-    tag: "Разговорный клуб",
-    title: "Speaking Club Online",
-    desc: "Живые разговоры на любые темы с носителями и учениками.",
-    seats: "20 мест",
+    date: "card.event4.date",
+    tag: "card.event4.tag",
+    title: "card.event4.title",
+    desc: "card.event4.desc",
+    seats: "card.event4.seats",
     emoji: "💬",
   },
   {
-    date: "28.07.26",
-    tag: "Кино",
-    title: "Кино на английском",
-    desc: "Смотрим фильм в оригинале, обсуждаем вместе — без субтитров.",
-    seats: "30 мест",
+    date: "card.event5.date",
+    tag: "card.event5.tag",
+    title: "card.event5.title",
+    desc: "card.event5.desc",
+    seats: "card.event5.seats",
     emoji: "🎬",
   },
 ];
@@ -75,18 +77,18 @@ function createCard(card) {
 
   div.innerHTML = `
     <div class="card-img">
-      <span class="card-date">${card.date}</span>
+      <span class="card-date">${getCurrentTranslation(card.date)}</span>
       <span>${card.emoji}</span>
     </div>
 
     <div class="card-body">
-      <div class="card-tag">${card.tag}</div>
-      <div class="card-title">${card.title}</div>
-      <div class="card-desc">${card.desc}</div>
+      <div class="card-tag">${getCurrentTranslation(card.tag)}</div>
+      <div class="card-title">${getCurrentTranslation(card.title)}</div>
+      <div class="card-desc">${getCurrentTranslation(card.desc)}</div>
 
       <div class="card-footer">
-        <span class="card-seats">${card.seats}</span>
-        <button class="card-btn">Участвовать</button>
+        <span class="card-seats">${getCurrentTranslation(card.seats)}</span>
+        <button class="card-btn">${getCurrentTranslation("card.btn")}</button>
       </div>
     </div>
   `;
@@ -208,5 +210,14 @@ window.addEventListener("resize", () => {
   updateSlider(false);
 });
 
-initSlider();
-startAutoSlide();
+window.refreshSlider = function () {
+  stopAutoSlide();
+  initSlider();
+  startAutoSlide();
+};
+
+window._sliderReady = true;
+
+if (window._pendingSliderRefresh) {
+  window.refreshSlider();
+}

@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ивенты</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script defer src="javascripts/main.js"></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О школе </a>
-        <a href="courses.html">Курсы</a>
-        <a href="events.html" class="active">Ивенты</a>
-        <a href="study.html">Обучение</a>
-        <a href="merch.html">Мерч</a>
-        <a href="courses.html" class="always-active">Пробный урок</a>
+        <a href="index.html" data-lang="nav.home">Главная</a>
+        <a href="about.html" data-lang="nav.about">О школе </a>
+        <a href="courses.html" data-lang="nav.courses">Курсы</a>
+        <a href="events.html" class="active" data-lang="nav.events">Ивенты</a>
+        <a href="study.html" data-lang="nav.study">Обучение</a>
+        <a href="merch.html" data-lang="nav.merch">Мерч</a>
+        <a href="courses.html" class="always-active" data-lang="nav.trial"
+          >Пробный урок</a
+        >
       </nav>
       <div class="header-right">
         <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang(this)">RU</button>
-          <button class="lang-btn" onclick="setLang(this)">EN</button>
+          <button class="lang-btn active" data-lang-btn="ru">RU</button>
+          <button class="lang-btn" data-lang-btn="en">EN</button>
         </div>
 
         <button class="cart-btn" onclick="openCart()">
@@ -33,7 +34,616 @@
         <button class="hamburger">☰</button>
       </div>
     </header>
-    <script src="javascripts/main.js"></script>
+
+    <main class="events-first">
+      <div class="events-first-label" data-lang="events.label">ИВЕНТЫ</div>
+      <h1 class="events-first-title" data-lang="events.title">
+        Все события LINGO
+      </h1>
+      <p class="events-first-sub" data-lang="events.subtitle">
+        Каждый месяц — мероприятия для студентов и всех желающих. Выбирай город
+        и формат.
+      </p>
+
+      <div class="calendar-box">
+        <div class="calendar-month-row">
+          <div class="calendar-month" data-lang="events.month">Июнь</div>
+        </div>
+        <div class="calendar-inner">
+          <div class="calendar-head">
+            <div class="calendar-time-header"></div>
+            <div class="calendar-head-cell today">
+              <span data-lang="events.mon">ПН</span>
+              <span class="date-num"><span>18</span></span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.tue">ВТ</span>
+              <span class="date-num">19</span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.wed">СР</span>
+              <span class="date-num">20</span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.thu">ЧТ</span>
+              <span class="date-num">21</span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.fri">ПТ</span>
+              <span class="date-num">22</span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.sat">СБ</span>
+              <span class="date-num">23</span>
+            </div>
+            <div class="calendar-head-cell">
+              <span data-lang="events.sun">ВС</span>
+              <span class="date-num">24</span>
+            </div>
+          </div>
+
+          <div class="calendar-body">
+            <div class="calendar-row">
+              <div class="calendar-row-label" data-lang="events.times.t1200">
+                12:00
+              </div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card blue-card"
+                  data-id="1"
+                  role="button"
+                  tabindex="0"
+                  aria-label="English Day"
+                >
+                  <div class="event-name" data-lang="events.english_day">
+                    English Day
+                  </div>
+                  <div class="mobile-sticker">🔥</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card green"
+                  data-id="2"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="event-name" data-lang="events.dod_english">
+                    ДОД Английский
+                  </div>
+                  <div class="mobile-sticker">🌸</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card blue-card"
+                  data-id="4"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="event-name" data-lang="events.spanish_games">
+                    Испанские игры
+                  </div>
+                  <div class="mobile-sticker">🇪🇸</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card blue-card"
+                  data-id="6"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="event-name" data-lang="events.book_club">
+                    Книжный клуб
+                  </div>
+                  <div class="mobile-sticker">📚</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calendar-row">
+              <div class="calendar-row-label" data-lang="events.times.t1400">
+                14:00
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card blue-card"
+                  data-id="3"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="event-name" data-lang="events.chinese_party">
+                    Китайская вечеринка
+                  </div>
+                  <div class="mobile-sticker">🇨🇳</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell">
+                <div
+                  class="event-card green"
+                  data-id="5"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="event-name" data-lang="events.dod_lingo">
+                    ДОД LINGO
+                  </div>
+                  <div class="mobile-sticker">🌸</div>
+                  <div class="event-time">12:00–18:00</div>
+                </div>
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+            </div>
+
+            <div class="calendar-row">
+              <div class="calendar-row-label" data-lang="events.times.t1800">
+                18:00
+              </div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+              <div class="calendar-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="overlay"
+      id="overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="windowTitle"
+    >
+      <div class="window" id="window">
+        <button
+          class="window-close"
+          id="windowClose"
+          aria-label="Закрыть"
+        ></button>
+        <div class="window-badge" id="windowBadge">ИВЕНТ</div>
+        <div class="window-title" id="windowTitle"></div>
+        <div class="window-meta">
+          <div class="window-row">
+            <i class="fa-regular fa-calendar"></i>
+            <span id="windowDate"></span>
+          </div>
+          <div class="window-row">
+            <i class="fa-regular fa-clock"></i>
+            <span id="windowTime"></span>
+          </div>
+          <div class="window-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="windowLoc"></span>
+          </div>
+          <div class="window-row">
+            <i class="fa-solid fa-users"></i>
+            <span id="windowLevel"></span>
+          </div>
+        </div>
+        <p class="window-desc" id="windowDesc"></p>
+        <div class="window-footer">
+          <a
+            class="btn-blue-join"
+            href="404.html"
+            id="windowBtnJoin"
+            data-lang="modal.btn_join"
+            >Записаться</a
+          >
+          <button
+            class="btn-white-close"
+            id="windowCloseBtn"
+            data-lang="modal.btn_close"
+          >
+            Закрыть
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-events" id="filters">
+      <button
+        class="filter-btn active"
+        data-filter="all"
+        data-lang="event-filter.all"
+      >
+        Все
+      </button>
+      <button class="filter-btn" data-filter="dod" data-lang="event-filter.dod">
+        ДОД
+      </button>
+      <button
+        class="filter-btn"
+        data-filter="entertainment"
+        data-lang="event-filter.entertainment"
+      >
+        Развлечения
+      </button>
+    </div>
+
+    <section class="merch-second">
+      <div class="card-event" data-category="entertainment">
+        <div class="card-event-backgrond backgrond-blue">
+          <span class="deadline-label" data-lang="cards.english_day.deadline"
+            >Регистрация до 8 июня</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">🔥</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-blue"
+            data-lang="cards.english_day.category"
+          >
+            Игры
+          </div>
+          <div class="card-event-title" data-lang="cards.english_day.title">
+            English Day
+          </div>
+          <div class="card-event-desc" data-lang="cards.english_day.desc">
+            Полное погружение в английский язык на весь день. Игры, дискуссии,
+            мастер-классы от носителей языка, cultural workshop и вечеринка.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.english_day.spots">12 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.english_day.date">20.08.2026</span></span
+            >
+          </div>
+          <div class="card-event-footer">
+            <div class="tags" data-lang="cards.english_day.tags">
+              <span data-lang="cards.english_day.tag_games" class="tag"
+                >игры</span
+              >
+              <span data-lang="cards.english_day.tag_party" class="tag"
+                >вечеринка</span
+              >
+              <span data-lang="cards.english_day.tag_master-courses" class="tag"
+                >мастер-классы</span
+              >
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.english_day.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Бизнес-симуляция -->
+      <div class="card-event" data-category="entertainment">
+        <div class="card-event-backgrond backgrond-orange">
+          <span class="deadline-label" data-lang="cards.business_sim.deadline"
+            >Регистрация до 4 июля</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">🤝</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-orange"
+            data-lang="cards.business_sim.category"
+          >
+            Работа в команде
+          </div>
+          <div class="card-event-title" data-lang="cards.business_sim.title">
+            Бизнес-симуляция
+          </div>
+          <div class="card-event-desc" data-lang="cards.business_sim.desc">
+            Разыгрываем деловые переговоры и презентации на английском языке.
+            Учим новую лексику и заводим новых друзей.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.business_sim.spots">8 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.business_sim.date">03.07.2026</span></span
+            >
+          </div>
+          <div class="card-event-footer">
+            <div class="tags" data-lang-tags="cards.business_sim.tags">
+              <span data-lang="cards.english_day.tag_games" class="tag"
+                >игры</span
+              >
+              <span data-lang="cards.english_day.debads" class="tag"
+                >переговоры</span
+              >
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.business_sim.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ДОД -->
+      <div class="card-event" data-category="dod">
+        <div class="card-event-backgrond backgrond-black">
+          <span class="deadline-label" data-lang="cards.dod_english.deadline"
+            >Регистрация до 18 июня</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">🌸</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-black"
+            data-lang="cards.dod_english.category"
+          >
+            День открытых дверей
+          </div>
+          <div class="card-event-title" data-lang="cards.dod_english.title">
+            ДОД Английский
+          </div>
+          <div class="card-event-desc" data-lang="cards.dod_english.desc">
+            День открытых дверей на курсах английского языка. Познакомься с
+            преподавателями, пройди бесплатное тестирование уровня и узнай о
+            программах обучения. Для записавшихся в этот день — скидка 15% на
+            первый месяц.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.dod_english.spots">60 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.dod_english.date">19.08.2026</span></span
+            >
+          </div>
+          <div class="card-event-footer">
+            <div class="tags" data-lang="cards.english_day.tags">
+              <span data-lang="cards.dod_english.tag_dod" class="tag">дод</span>
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.dod_english.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Игры на английском -->
+      <div class="card-event" data-category="entertainment">
+        <div class="card-event-backgrond backgrond-yellow">
+          <span class="deadline-label" data-lang="cards.games_english.deadline"
+            >Регистрация до 3 июня</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">🎮</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-black"
+            data-lang="cards.games_english.category"
+          >
+            Игры
+          </div>
+          <div class="card-event-title" data-lang="cards.games_english.title">
+            Игры на английском
+          </div>
+          <div class="card-event-desc" data-lang="cards.games_english.desc">
+            Квиз, ролевые игры и дебаты — всё на изучаемом языке, всем весело и
+            познавательно.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.games_english.spots">12 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.games_english.date">30.06.2026</span></span
+            >
+          </div>
+          <div class="card-footer">
+            <div class="tags" data-lang-tags="cards.games_english.tags">
+              <span data-lang="cards.games_english.tag_games" class="tag"
+                >игры</span
+              >
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.games_english.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Speaking Club -->
+      <div class="card-event" data-category="entertainment">
+        <div class="card-event-backgrond backgrond-orange">
+          <span class="deadline-label" data-lang="cards.speaking_club.deadline"
+            >Регистрация до 1 июля</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">💬</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-orange"
+            data-lang="cards.speaking_club.category"
+          >
+            Разговорный клуб
+          </div>
+          <div class="card-event-title" data-lang="cards.speaking_club.title">
+            Speaking Club Online
+          </div>
+          <div class="card-event-desc" data-lang="cards.speaking_club.desc">
+            Живые разговоры на любые темы с носителями и учениками. Поделись
+            своими самыми интересными историями.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.speaking_club.spots">20 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.speaking_club.date">15.07.2026</span></span
+            >
+          </div>
+          <div class="card-event-footer">
+            <div class="tags" data-lang-tags="cards.speaking_club.tags">
+              <span
+                class="tag"
+                data-lang="cards.speaking_club.tag_conversations"
+                >разговоры</span
+              >
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.speaking_club.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ДОД -->
+      <div class="card-event" data-category="dod">
+        <div class="card-event-backgrond backgrond-blue">
+          <span class="deadline-label" data-lang="cards.dod_lingo.deadline"
+            >Регистрация до 21 июня</span
+          >
+          <span class="card-event-emoji" aria-hidden="true">🌸</span>
+        </div>
+        <div class="card-event-body">
+          <div
+            class="card-event-category tag-blue"
+            data-lang="cards.dod_lingo.category"
+          >
+            День открытых дверей
+          </div>
+          <div class="card-event-title" data-lang="cards.dod_lingo.title">
+            ДОД LINGO
+          </div>
+          <div class="card-event-desc" data-lang="cards.dod_lingo.desc">
+            Главный день открытых дверей LINGO. Все языки, все форматы, все
+            преподаватели в одном месте. Пробные уроки, экскурсия по школе,
+            специальные предложения и живое общение с командой.
+          </div>
+          <div class="card-event-meta">
+            <span
+              ><span>👥</span>
+              <span data-lang="cards.dod_lingo.spots">60 мест</span></span
+            >
+            <span
+              ><span>🗓</span>
+              <span data-lang="cards.dod_lingo.date">22.08.2026</span></span
+            >
+          </div>
+          <div class="card-event-footer">
+            <div class="tags" data-lang="cards.english_day.tags">
+              <span data-lang="cards.dod.tag_dod" class="tag">дод</span>
+            </div>
+            <a
+              href="404.html"
+              class="btn-join"
+              data-lang="cards.english_day.btn"
+              >Участвовать</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">LINGO</div>
+            <p class="footer-desc" data-lang="footer.desc">
+              Глобальная языковая школа для людей любого возраста и
+              возможностей. Делаем языки доступными для каждого.
+            </p>
+            <div class="footer-countries">
+              <span class="footer-little-desc" data-lang="footer.cities"
+                >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col1-title">Обучение</h4>
+            <ul class="footer-links">
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+              <li>
+                <a href="study.html" data-lang="footer.cabinet"
+                  >Личный кабинет</a
+                >
+              </li>
+              <li><a href="events.html" data-lang="nav.events">Ивенты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col2-title">Школа</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="about.html" data-lang="footer.about-us">О нас</a>
+              </li>
+              <li><a href="merch.html" data-lang="nav.merch">Мерч</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col3-title">Дизайн</h4>
+            <ul class="footer-links">
+              <li><a href="#">Б25ДЗ09</a></li>
+              <li>
+                <a href="https://www.behance.net/polinaklimova2"
+                  >Полина Климова</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy" data-lang="footer.copy">
+            © 2026 LINGO. Все права защищены.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📱</a>
+            <a href="#" class="social-btn">✈️</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="javascripts/localization.js"></script>
+    <script src="javascripts/filter-for-events.js"></script>
     <script src="javascripts/header.js"></script>
+    <script src="javascripts/cart.js"></script>
+    <script src="javascripts/events-cards.js"></script>
   </body>
 </html>

@@ -1,9 +1,21 @@
 let currentTranslations = {};
 
-// Получить тест перевода по выбранному языку для конкретной фразы
-function getCurrentTranslation(key) {
+export function getCurrentTranslation(key) {
   return currentTranslations[key] || key;
 }
+
+export function applyTranslations(root = document) {
+  root.querySelectorAll("[data-lang]").forEach((element) => {
+    const key = element.dataset.lang;
+    if (currentTranslations[key]) {
+      element.textContent = currentTranslations[key];
+    }
+  });
+}
+
+// Глобальные обёртки для файлов без импорта
+window.getCurrentTranslation = getCurrentTranslation;
+window.applyTranslations = applyTranslations;
 
 async function setLang(lang, button) {
   let buttons = document.querySelectorAll(".lang-btn");
@@ -23,6 +35,7 @@ async function loadLanguage(lang) {
   const translations = module.default;
 
   currentTranslations = translations;
+  window.currentTranslations = translations;
 
   // Локализация текста
   document.querySelectorAll("[data-lang]").forEach((element) => {
@@ -30,6 +43,22 @@ async function loadLanguage(lang) {
 
     if (translations[key]) {
       element.textContent = translations[key];
+    }
+  });
+
+  document.querySelectorAll("[data-lang-aria]").forEach((element) => {
+    const key = element.dataset.langAria;
+
+    if (translations[key]) {
+      element.setAttribute("aria-label", translations[key]);
+    }
+  });
+
+  document.querySelectorAll("[data-lang-placeholder]").forEach((element) => {
+    const key = element.dataset.langPlaceholder;
+
+    if (translations[key]) {
+      element.placeholder = translations[key];
     }
   });
 
@@ -45,10 +74,22 @@ async function loadLanguage(lang) {
   localStorage.setItem("language", lang);
 
   // Обновляем надписи кнопок корзины
-  updateCartTexts();
+  if (typeof window.updateCourseCartTexts === "function") {
+    window.updateCourseCartTexts();
+  }
+
+  if (window._sliderReady) {
+    window.refreshSlider();
+  } else {
+    window._pendingSliderRefresh = true;
+  }
+
+  if (window.refreshOpenedModal) {
+    window.refreshOpenedModal();
+  }
 }
 
-// Настройка кнопок для переключаения языка
+// Настройка кнопок для переключения языка
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     setLang(btn.dataset.langBtn, btn);
