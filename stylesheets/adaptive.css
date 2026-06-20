@@ -797,8 +797,14 @@
 }
 
 /* -------------------------------------------ГЛАВНАЯ--------------------------------------------- */
-@media (max-width: 1050px) {
+@media (max-width: 1260px) {
   .msg2-main-first {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .card-main-first {
     display: none;
   }
 }
@@ -819,9 +825,11 @@
   }
 
   .card-main-first {
-    top: 125px;
-    width: 250px;
-    left: 61%;
+    .card-main-first {
+      top: 237px;
+      width: 260px;
+      left: 68%;
+    }
   }
 
   .msg1-main-first {
@@ -999,6 +1007,7 @@
     padding: 0 16px 12px;
   }
 }
+
 @media (max-width: 450px) {
   .main-first-title {
     font-size: 40px;
