@@ -435,7 +435,7 @@ export default {
   "course-second.sub":
     "Find out your language proficiency level to make it easier to choose a course.",
   "course-second.english": "English",
-  "course-second.french": "French",
+  "course-second.chinese": "Chinese",
   "course-second.german": "German",
 
   /* <!------------- ТРЕТИЙ ЭКРАН -----------> */

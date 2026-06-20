@@ -2888,7 +2888,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 80px 80px;
+  padding: 80px;
 }
 
 .error-404-top {

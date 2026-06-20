@@ -539,6 +539,110 @@
     width: 340px;
   }
 }
+@media (max-width: 320px) {
+  .study-first {
+    padding: 60px 12px;
+  }
+
+  .study-first-title {
+    font-size: 26px;
+  }
+
+  .study-first-sub {
+    font-size: 14px;
+  }
+
+  .study-first-card {
+    padding: 20px 16px 16px;
+    min-height: 140px;
+    border-radius: 14px;
+  }
+
+  .study-first-card-num {
+    font-size: 40px;
+  }
+
+  .study-first-card-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .study-first-card-title {
+    font-size: 18px;
+  }
+
+  .study-first-card-text {
+    font-size: 12px;
+  }
+
+  .study-second {
+    padding: 40px 13px;
+  }
+
+  .study-second-inner {
+    margin: 0;
+    gap: 24px;
+  }
+
+  .study-second-title {
+    font-size: 22px;
+  }
+
+  .study-second-sub {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .study-second-label {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .study-second-item {
+    padding: 10px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+
+  .study-second-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    border-radius: 8px;
+  }
+
+  .study-second-name {
+    font-size: 13px;
+  }
+
+  .study-second-desc {
+    font-size: 12px;
+  }
+
+  .study-third {
+    padding: 24px 12px;
+  }
+
+  .study-third-box {
+    padding: 40px 16px;
+    border-radius: 18px;
+  }
+
+  .study-third-title {
+    font-size: 22px;
+  }
+
+  .study-third-sub {
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .study-third-btn {
+    font-size: 13px;
+    padding: 13px 24px;
+  }
+}
 
 /* ----------------------------------КОРЗИНА----------------------------------------- */
 
@@ -1032,6 +1136,22 @@
   .about-second-title {
     font-size: 31px;
   }
+  .course-first-title {
+    font-size: 44px;
+  }
+  .about-third-title {
+    font-size: 42px;
+  }
+  .events-first-title {
+    font-size: 42px;
+  }
+  .about-third {
+    padding: 48px 5px;
+  }
+
+  .study-third-title {
+    font-size: 27px;
+  }
 }
 
 @media (max-width: 1399px) and (min-width: 1024px) {
@@ -1233,5 +1353,90 @@
 
   .side-menu-nav a {
     text-align: center;
+  }
+}
+
+/* ----------------------------------404 ОШИБКА----------------------------------------- */
+@media (max-width: 1024px) {
+  .error-404 {
+    padding: 60px;
+  }
+
+  .error-404-big {
+    font-size: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error-404 {
+    padding: 40px;
+  }
+
+  .error-404-big {
+    font-size: 120px;
+  }
+
+  .error-404-msg {
+    font-size: 16px;
+  }
+
+  .error-404-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-404 {
+    padding: 28px 20px;
+  }
+
+  .error-404-big {
+    font-size: 22vw;
+  }
+
+  .error-404-small-text {
+    font-size: 11px;
+  }
+
+  .error-404-msg {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .error-404-btn {
+    font-size: 11px;
+    margin-top: 24px;
+    padding: 13px 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .error-404 {
+    padding: 20px 14px;
+  }
+
+  .error-404-big {
+    font-size: 19vw;
+  }
+
+  .error-404-top {
+    font-size: 10px;
+  }
+
+  .error-404-small-text {
+    font-size: 10px;
+  }
+
+  .error-404-msg {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .error-404-btn {
+    font-size: 10px;
+    padding: 11px 16px;
+    margin-top: 18px;
   }
 }

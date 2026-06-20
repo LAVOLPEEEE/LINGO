@@ -437,7 +437,7 @@ export default {
   "course-second.sub":
     "Узнай свой уровень знания языка, чтобы тебе легче было выбрать курс",
   "course-second.english": "Английский",
-  "course-second.Frenc": "Французский",
+  "course-second.chinese": "Китайский",
   "course-second.german": "Немецкий",
 
   /* <!------------- ТРЕТИЙ ЭКРАН -----------> */
