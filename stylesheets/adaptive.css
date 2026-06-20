@@ -797,7 +797,7 @@
 }
 
 /* -------------------------------------------ГЛАВНАЯ--------------------------------------------- */
-@media (max-width: 1150px) {
+@media (max-width: 1050px) {
   .msg2-main-first {
     display: none;
   }
@@ -999,7 +999,7 @@
     padding: 0 16px 12px;
   }
 }
-@media (max-width: 670px) {
+@media (max-width: 450px) {
   .main-first-title {
     font-size: 40px;
   }
