@@ -797,6 +797,11 @@
 }
 
 /* -------------------------------------------ГЛАВНАЯ--------------------------------------------- */
+@media (max-width: 1150px) {
+  .msg2-main-first {
+    display: none;
+  }
+}
 
 @media (max-width: 1024px) {
   .main-first,
@@ -819,8 +824,7 @@
     left: 61%;
   }
 
-  .msg1-main-first,
-  .msg2-main-first {
+  .msg1-main-first {
     display: none;
   }
 
@@ -995,6 +999,24 @@
     padding: 0 16px 12px;
   }
 }
+@media (max-width: 670px) {
+  .main-first-title {
+    font-size: 40px;
+  }
+  .main-second-title {
+    font-size: 36px;
+  }
+  .study-format-title {
+    font-size: 34px;
+  }
+  .fifth-h2 {
+    font-size: 38px;
+  }
+  .about-second-title {
+    font-size: 31px;
+  }
+}
+
 @media (max-width: 1399px) and (min-width: 1024px) {
   .main-forth-label {
     font-size: 13px;
