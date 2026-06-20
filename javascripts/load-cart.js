@@ -42,13 +42,30 @@ function fillCartSidebarContent() {
 
   cartContent.innerHTML = "";
 
+  if (cart.courses.length > 0) {
+    addCartLabel(cartContent, "courses");
+  }
+
   cart.courses.forEach((courseName) => {
     cartContent.appendChild(createCourseCartItem(courseName));
   });
 
+  if (Object.keys(cart.merch).length > 0) {
+    addCartLabel(cartContent, "merch");
+  }
+
   Object.entries(cart.merch).forEach(([merchName, quantity]) => {
     cartContent.appendChild(createMerchCartItem(merchName, quantity));
   });
+}
+
+function addCartLabel(cartContent, nameOfItems) {
+  const label = document.createElement("h2");
+
+  label.className = `cart-${nameOfItems}-label`;
+  label.dataset.lang = `cart-${nameOfItems}-title`;
+
+  cartContent.appendChild(label);
 }
 
 function createCourseCartItem(courseName) {

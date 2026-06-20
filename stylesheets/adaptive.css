@@ -1,4 +1,33 @@
-/* -----ШАПКА----- */
+:root {
+  --darkblue: #1b3bff;
+  --darkblue2: #142dce;
+  --blue: #3063ff;
+  --blue2: #2859ff;
+  --lightblue2: #3e69ff;
+  --lightblue3: #1c51ff;
+  --lightblue: #b8c9ff;
+  --lightblue4: #5369ff;
+  --yellow: #ddff00;
+  --darkyellow: #8cac37;
+  --green: #1db954;
+  --white: #ffffff;
+  --darkwhite: #e5eeff;
+  --black: #0a0a0a;
+  --lightblack: #111111;
+  --grey: #444444;
+  --grey2: #222222;
+  --grey3: #666666;
+  --gray4: #f2f2f2;
+  --grey5: #888888;
+  --grey6: #dddddd;
+  --grey7: #d6d6d6;
+  --grey8: #f2f2f2;
+  --grey9: #f0f0ee;
+  --orange: #ff6b36;
+  --red: #c41e3b;
+}
+
+/* ----------------------------------ШАПКА----------------------------------------- */
 
 @media (max-width: 1024px) {
   nav {
@@ -12,8 +41,8 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.12);
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
   }
 }
 
@@ -23,7 +52,16 @@
   }
 }
 
-/* -----КУРСЫ----- */
+/* ----------------------------------КУРСЫ----------------------------------------- */
+
+@media (max-width: 1635px) {
+  .stroke-one-hour {
+    display: none;
+  }
+  .stroke-free {
+    display: none;
+  }
+}
 
 @media (max-width: 1050px) {
   .course-second {
@@ -37,15 +75,6 @@
 }
 
 @media (max-width: 680px) {
-  .course-first {
-    padding: 1.5rem 1rem;
-  }
-
-  h1 {
-    font-size: clamp(22px, 6vw, 32px);
-    margin-bottom: 1rem;
-  }
-
   .filters {
     gap: 6px;
     margin-bottom: 1.5rem;
@@ -140,31 +169,10 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .page,
-  .lang-btn {
-    animation: none;
-  }
-  .lang-btn,
-  .lang-arrow {
-    transition: none;
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @media (max-width: 480px) {
   .lang-btn {
     border-radius: 14px;
-    padding: 17px 16px 17px 22px;
+    padding: 12px 16px 12px 22px;
   }
 
   .lang-arrow {
@@ -181,16 +189,18 @@
     font-size: 10px;
     padding: 6px 16px;
   }
-}
-
-@media (max-width: 360px) {
+  header {
+    padding: 0px 9px;
+  }
+  .header-right {
+    gap: 5px;
+  }
   .lang-btn {
-    padding: 15px 14px 15px 18px;
-    border-radius: 12px;
+    padding: 11px 14px 11px 18px;
   }
 }
 
-/* -----МЕРЧ----- */
+/* ----------------------------------МЕРЧ----------------------------------------- */
 @media (max-width: 910px) {
   .grid2 {
     grid-template-columns: repeat(2, 1fr);
@@ -233,7 +243,7 @@
   }
 }
 
-/* -----ИВЕНТЫ----- */
+/* ----------------------------------ИВЕНТЫ----------------------------------------- */
 @media (max-width: 840px) {
   .events-first {
     margin: 100px 20px 0px 20px;
@@ -324,7 +334,16 @@
   }
 }
 
-/* -----О ШКОЛЕ----- */
+/* ----------------------------------О ШКОЛЕ----------------------------------------- */
+@media (max-width: 1250px) {
+  .about-forth-stroke-free {
+    display: none;
+  }
+  .about-forth-stroke-one-hour {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .about-first {
     grid-template-columns: 1fr;
@@ -352,24 +371,6 @@
   }
   .about-first-title {
     font-size: 60px;
-  }
-  .about-forth-stroke-one-hour {
-    display: none;
-  }
-
-  .about-forth-stroke-free {
-    display: none;
-  }
-}
-@media (max-width: 1000px) {
-  .about-forth-stroke-one-hour {
-    left: 71vw;
-    width: 22vw;
-  }
-
-  .about-forth-stroke-free {
-    left: 91px;
-    width: 20vw;
   }
 }
 
@@ -413,14 +414,6 @@
     border-radius: 20px;
   }
 
-  .about-forth-stroke-one-hour {
-    display: none;
-  }
-
-  .about-forth-stroke-free {
-    display: none;
-  }
-
   .about-forth-sub {
     font-size: 14px;
     width: 260px;
@@ -430,46 +423,18 @@
   }
 }
 
-/* -----ОБУЧЕНИЕ----- */
-@media (max-width: 680px) {
-  .study-first-grid {
-    grid-template-columns: 1fr;
-  }
-  .study-first-card-num {
-    font-size: 52px;
-  }
-  .study-second-inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 681px) and (max-width: 860px) {
-  .study-first-grid {
-    gap: 10px;
-  }
-  .study-second-inner {
-    gap: 32px;
-  }
-}
-
-/* -----ОБУЧЕНИЕ----- */
-@media (max-width: 1100px) {
-  .study-second-inner {
-    margin: 0 40px;
-    gap: 32px;
-  }
-
-  .study-second-title {
-    font-size: 36px;
-  }
-
+/* ----------------------------------ОБУЧЕНИЕ----------------------------------------- */
+@media (max-width: 1250px) {
   .study_second_card {
-    width: 360px;
-    max-width: 38vw;
+    left: 57vw;
+    top: 343px;
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
+  .study_second_card {
+    display: none;
+  }
   .study-second {
     padding: 52px 20px;
   }
@@ -497,22 +462,46 @@
   .study-second-desc {
     font-size: 15px;
   }
+}
 
+@media (max-width: 1100px) {
+  .study-second-inner {
+    margin: 0 40px;
+    gap: 32px;
+  }
+
+  .study-second-title {
+    font-size: 36px;
+  }
+
+  .study-first {
+    margin: 0 0;
+  }
+}
+
+@media (max-width: 860px) {
   .study_second_card {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
+    display: none;
+  }
+
+  .study-third {
+    padding: 48px 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .study-first-grid {
+    grid-template-columns: 1fr;
+  }
+  .study-first-card-num {
+    font-size: 52px;
+  }
+  .study-second-inner {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .study-second {
-    padding: 40px 16px;
-  }
-
   .study-second-title {
     font-size: 26px;
   }
@@ -542,12 +531,16 @@
     font-size: 14px;
   }
 
-  .study_second_card {
-    max-width: 100%;
+  .study-second {
+    padding: 52px 0px;
+  }
+  .study-third-sub {
+    font-size: 16px;
+    width: 340px;
   }
 }
 
-/* -----КОРЗИНА----- */
+/* ----------------------------------КОРЗИНА----------------------------------------- */
 
 @media (max-width: 590px) {
   .cart-container {
@@ -560,6 +553,7 @@
   }
 }
 
+/* ----------------------------------ФУТЕР----------------------------------------- */
 @media (max-width: 1023px) {
   footer {
     padding: 40px 24px 20px;
@@ -695,22 +689,511 @@
   }
 }
 
-@media (max-width: 590px) {
-  footer {
-    padding: 32px 16px 20px;
+/* -------------------------------------------ФОРМА--------------------------------------------- */
+@media (max-width: 1024px) {
+  .main-sixth {
+    padding: 6vw 5vw;
   }
 
-  .footer-logo {
+  .free-lesson-inner .main-sixth-title {
+    font-size: 48px;
+  }
+
+  .free-lesson-inner .main-sixth-des {
     font-size: 18px;
   }
 
-  .footer-desc,
-  .footer-links a {
+  .main-sixth-form {
+    border-radius: 24px;
+    gap: 12px;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 17px;
+    border-radius: 12px;
+  }
+
+  .form-submit {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-sixth {
+    padding: 36px 16px;
+  }
+
+  .free-lesson-inner .main-sixth-title {
+    font-size: 50px;
+  }
+
+  .free-lesson-inner .main-sixth-des {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .main-sixth-form {
+    padding: 20px 16px;
+    border-radius: 16px;
+    gap: 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-input {
+    padding: 13px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .form-select {
+    padding: 16px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  .form-submit {
+    font-size: 12px;
+    padding: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .form-note {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-sixth {
+    padding: 28px 14px;
+  }
+
+  .free-lesson-inner .main-sixth-title {
+    font-size: 26px;
+  }
+
+  .free-lesson-inner .main-sixth-des {
     font-size: 14px;
   }
 
-  .social-btn {
-    width: 42px;
-    height: 42px;
+  .main-sixth-form {
+    padding: 16px 12px;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .form-submit {
+    font-size: 11px;
+    padding: 15px;
+  }
+}
+
+/* -------------------------------------------ГЛАВНАЯ--------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .main-first,
+  .main-second,
+  .main-third {
+    padding: 40px 40px 60px;
+    gap: 40px;
+  }
+
+  .left-main-first,
+  .left-main-second {
+    width: 60%;
+    max-width: 100%;
+    padding-top: 40px;
+  }
+
+  .card-main-first {
+    top: 125px;
+    width: 250px;
+    left: 61%;
+  }
+
+  .msg1-main-first,
+  .msg2-main-first {
+    display: none;
+  }
+
+  .main-first {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .main-second {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .right-main-second {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .main-third {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .study-format-content {
+    max-width: 100%;
+  }
+
+  .card-main-third,
+  .stroke-main-third {
+    display: none;
+  }
+
+  .top-right-main-second,
+  .bottom-right-main-second {
+    gap: 12px;
+  }
+
+  .stat-box,
+  .stat-box2 {
+    padding: 28px 20px 20px;
+  }
+  .main-fifth {
+    min-height: auto;
+  }
+
+  .full-main-fifth-label {
+    padding-top: 40px;
+    margin-bottom: 28px;
+  }
+
+  .faq-list {
+    width: 92%;
+    gap: 8px;
+  }
+
+  .faq-question {
+    padding: 14px 20px;
+  }
+
+  .faq-answer {
+    padding: 0 20px;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 0 20px 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .left-main-first,
+  .left-main-second {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+  }
+
+  .main-first,
+  .main-second,
+  .main-third {
+    padding: 70px 20px 40px;
+    gap: 28px;
+  }
+
+  .left-main-first {
+    gap: 20px;
+  }
+
+  .left-main-second {
+    gap: 16px;
+    padding-top: 20px;
+  }
+
+  .main-first-btns,
+  .main-second-btns,
+  .main-third-btns {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+  }
+
+  .btn-yellow,
+  .btn-transparent,
+  .btn-blue,
+  .btn-yellow1 {
+    text-align: center;
+    padding: 14px 20px;
+    width: 100%;
+  }
+
+  .right-main-second {
+    gap: 8px;
+  }
+
+  .top-right-main-second,
+  .bottom-right-main-second {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stat-box,
+  .stat-box2 {
+    padding: 20px 16px;
+  }
+
+  .features {
+    gap: 10px;
+  }
+
+  .feature {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .running-stroke {
+    gap: 24px;
+  }
+
+  .stroke {
+    padding: 16px 0;
+  }
+
+  .card-main-first {
+    display: none;
+  }
+
+  .full-main-fifth-label {
+    padding-top: 28px;
+    margin-bottom: 20px;
+  }
+
+  .faq-list {
+    width: 100%;
+    padding: 0 16px 40px;
+    gap: 6px;
+    box-sizing: border-box;
+  }
+
+  .faq-item {
+    border-radius: 10px;
+  }
+
+  .faq-question {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .faq-answer {
+    padding: 0 16px;
+  }
+
+  .faq-item.open .faq-answer {
+    padding: 0 16px 12px;
+  }
+}
+@media (max-width: 1399px) and (min-width: 1024px) {
+  .main-forth-label {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+  .main-forth-title {
+    font-size: 38px;
+    margin-bottom: 32px;
+  }
+  .card-img {
+    height: 190px;
+    font-size: 56px;
+  }
+  .card-date {
+    font-size: 12px;
+    padding: 5px 11px;
+    top: 12px;
+    left: 12px;
+  }
+  .card-body {
+    height: auto;
+    min-height: 190px;
+  }
+  .card-desc {
+    font-size: 13px;
+    min-height: 40px;
+  }
+  .card-btn {
+    font-size: 13px;
+  }
+  .btn-transparent2 {
+    padding: 14px 28px;
+  }
+  .transition-forth-right,
+  .transition-forth-left {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 601px) {
+  .main-forth {
+    padding: 32px 0 40px;
+  }
+  .main-forth-label {
+    margin-left: 28px;
+    font-size: 12px;
+    padding: 8px 14px;
+    width: max-content;
+  }
+  .main-forth-title {
+    margin-left: 28px;
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+  .card-img {
+    height: 170px;
+    font-size: 48px;
+  }
+  .card-date {
+    font-size: 11px;
+    padding: 4px 10px;
+    top: 12px;
+    left: 12px;
+  }
+  .card-body {
+    height: auto;
+    min-height: 180px;
+    padding: 18px;
+  }
+  .card-title {
+    font-size: 17px;
+  }
+  .card-desc {
+    font-size: 13px;
+    min-height: 36px;
+  }
+  .card-btn {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+  .main-forth-btns {
+    margin-top: 28px;
+  }
+  .btn-transparent2 {
+    padding: 12px 26px;
+  }
+  .transition-forth-right,
+  .transition-forth-left {
+    width: 60vw;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-forth {
+    padding: 28px 0 36px;
+  }
+
+  .main-forth-label {
+    margin-left: 16px;
+    font-size: 11px;
+    padding: 6px 13px;
+    width: max-content;
+  }
+
+  .main-forth-title {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: clamp(22px, 7vw, 30px);
+    margin-bottom: 22px;
+  }
+
+  .carousel-track {
+    padding: 6px 0 12px;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .card-img {
+    height: 38vw;
+    min-height: 130px;
+    max-height: 190px;
+    font-size: 40px;
+  }
+
+  .card-date {
+    font-size: 11px;
+    padding: 4px 10px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .card-body {
+    height: auto;
+    min-height: 170px;
+    padding: 16px;
+  }
+
+  .card-tag {
+    font-size: 10.5px;
+    margin-bottom: 7px;
+  }
+  .card-title {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+  .card-desc {
+    font-size: 12.5px;
+    min-height: 32px;
+    margin-bottom: 12px;
+  }
+  .card-seats {
+    font-size: 11.5px;
+  }
+  .card-btn {
+    font-size: 12.5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+
+  .main-forth-btns {
+    margin-top: 20px;
+  }
+  .btn-transparent2 {
+    padding: 11px 24px;
+    font-size: 14px;
+  }
+
+  .transition-forth-right,
+  .transition-forth-left {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-forth-title {
+    font-size: 22px;
+  }
+  .card-img {
+    font-size: 32px;
+  }
+  .card-title {
+    font-size: 14px;
+  }
+  .card-desc {
+    font-size: 12px;
+  }
+}
+
+/* -------------------------------------------ГЛАВНАЯ--------------------------------------------- */
+@media (max-width: 390px) {
+  .side-menu-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .side-menu-nav a {
+    text-align: center;
   }
 }

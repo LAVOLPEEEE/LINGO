@@ -5,7 +5,7 @@
 }
 body {
   font-family: "InterRegular", sans-serif;
-  background: #ffffff;
+  background: var(--white);
 }
 
 :root {
@@ -55,7 +55,6 @@ header {
 .logo {
   font-family: "Unbounded";
   font-size: 24px;
-  font-weight: 900;
   color: var(--white);
   letter-spacing: -1px;
   text-decoration: none;
@@ -68,14 +67,13 @@ nav {
 
 nav a {
   font-family: "InterBold";
-  font-size: 1vw;
-  font-weight: 500;
+  font-size: 14px;
   color: var(--lightblue);
   text-decoration: none;
   padding: 6px 14px;
   border-radius: 100px;
   transition: all 0.2s;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
 }
 
 nav a:hover {
@@ -108,15 +106,14 @@ nav a.always-active {
 
 .lang-btn {
   font-family: "InterBold";
-  font-size: 1vw;
-  font-weight: 600;
+  font-size: 14px;
   padding: 5px 12px;
   border: none;
   background: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--lightblue);
   cursor: pointer;
   transition: all 0.2s;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
 }
 
 .lang-btn.active {
@@ -125,8 +122,8 @@ nav a.always-active {
   border-radius: 100px;
 }
 
-/* КНОПКА КОРЗИНЫ TO DO */
 .cart-btn {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -136,14 +133,13 @@ nav a.always-active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
   font-size: 18px;
   transition: all 0.2s;
-  position: relative;
 }
 
 .cart-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--lightblue4);
 }
 
 .cart-count {
@@ -156,7 +152,6 @@ nav a.always-active {
   background: var(--yellow);
   color: var(--black);
   font-size: 10px;
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,39 +163,41 @@ nav a.always-active {
 
 /* <!---------------------------- ГЛАВНАЯ ------------------------------> */
 /* ПЕРВЫЙ ЭКРАН */
-
 .main-first {
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 6vw;
-  padding: 3vw 6vw 6vw 6vw;
+  gap: 80px;
+  padding: 40px 80px 80px;
   width: 100%;
-  height: 51vw;
+  min-height: 700px;
   background-color: var(--darkblue);
   overflow: hidden;
+  box-sizing: border-box;
 }
+
 .left-main-first {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
-  width: 43vw;
-  padding-top: 6vw;
+  gap: 40px;
+  width: 50%;
+  max-width: 620px;
+  padding-top: 80px;
 }
 
 .main-first-label {
   display: inline-flex;
   align-items: center;
   font-family: "InterBold";
-  width: 25.2vw;
   background: var(--blue2);
   border: 1px solid var(--lightblue2);
   border-radius: 100px;
   color: var(--yellow);
-  padding: 0.6vw 1vw;
-  font-size: 1vw;
-  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  font-size: 13px;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .dot {
@@ -211,39 +208,41 @@ nav a.always-active {
   display: flex;
   flex-direction: column;
 }
+
 .main-first-title {
   font-family: "Unbounded";
-  font-size: 5vw;
+  font-size: 72px;
   color: var(--white);
-  line-height: 0.95;
-  margin-bottom: 1.6vw;
+  line-height: 0.9;
+  margin-bottom: 24px;
 }
 
 .main-first-title span {
   color: var(--yellow);
 }
+
 .main-first-description {
-  font-size: 1.5vw;
-  line-height: 1.3;
+  font-size: 20px;
+  line-height: 1.4;
   color: var(--lightblue);
-  width: 34vw;
-  margin-bottom: 2vw;
+  max-width: 480px;
+  margin-bottom: 28px;
 }
 
 .main-first-btns {
-  display: flex;
-  font-family: "Unbounded";
-  gap: 1vw;
-  flex-wrap: wrap;
-  font-size: 1.2vw;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: "Unbounded";
+  font-size: 18px;
+  cursor: pointer;
 }
+
 .btn-yellow {
   background: var(--yellow);
   border-radius: 100px;
-  padding: 1.2vw 2vw;
+  padding: 16px 28px;
   color: var(--black);
   border: none;
   text-decoration: none;
@@ -251,6 +250,7 @@ nav a.always-active {
     transform 0.2s,
     box-shadow 0.2s;
 }
+
 .btn-yellow:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--darkyellow);
@@ -259,14 +259,16 @@ nav a.always-active {
 .btn-transparent {
   background: transparent;
   border-radius: 100px;
-  padding: 1.2vw 2vw;
+  padding: 14px 28px;
   text-decoration: none;
   color: var(--white);
   border: 2px solid var(--lightblue);
   transition:
     border-color 0.2s,
     background 0.2s;
+  white-space: nowrap;
 }
+
 .btn-transparent:hover {
   border-color: var(--white);
   background: var(--lightblue2);
@@ -274,45 +276,47 @@ nav a.always-active {
 
 .card-main-first {
   position: absolute;
-  top: 12vw;
-  left: 57vw;
-  width: 35vw;
+  top: 160px;
+  left: 58%;
+  width: clamp(280px, 35vw, 500px);
   animation: floatCard 6s ease-in-out infinite;
 }
+
 .msg1-main-first {
   position: absolute;
-  top: 7vw;
-  left: 76vw;
+  top: 80px;
+  left: 78%;
   width: 17vw;
   rotate: 7deg;
   animation: floatMsg1 5s ease-in-out infinite;
 }
+
 .msg2-main-first {
   position: absolute;
-  top: 42vw;
-  left: 44vw;
-  width: 21vw;
+  top: 79%;
+  left: 39%;
+  width: 341px;
   rotate: 3deg;
   animation: floatMsg2 5s ease-in-out infinite;
 }
 
-/* БЕГУЩАЯ СТРОКА */
+/* <!---------------------------- БЕГУЩАЯ СТРОКА ------------------------------> */
 .stroke {
   background: var(--yellow);
   color: var(--black);
-  padding: 2vw 0;
+  padding: 24px 0;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .running-stroke {
   display: inline-flex;
-  gap: 4vw;
+  gap: 48px;
   animation: running-stroke 20s linear infinite;
   font-family: "Unbounded";
-  font-size: 1.2vw;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
 }
 
 .stroke-dot {
@@ -324,132 +328,138 @@ nav a.always-active {
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 6vw;
-  padding: 3vw 6vw 6vw 6vw;
+  gap: 80px;
+  padding: 40px 80px 80px;
   width: 100%;
-  height: 50vw;
+  min-height: 680px;
   background-color: var(--whites);
+  box-sizing: border-box;
 }
 
 .left-main-second {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
-  width: 43vw;
-  padding-top: 6vw;
+  gap: 24px;
+  width: 50%;
+  max-width: 620px;
+  padding-top: 80px;
 }
 
 .main-second-label {
-  display: inline-flex;
-  align-items: center;
-  font-family: "InterBold";
-  width: 86px;
+  display: inline-block;
   background: var(--blue2);
-  border: 1px solid var(--lightblue2);
-  border-radius: 100px;
   color: var(--white);
-  padding: 0.6vw 1vw;
-  font-size: 10px;
-  letter-spacing: 0.05em;
+  font-family: "InterSemiBold";
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  min-width: 145px;
+  padding: 9px 19px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  width: fit-content;
 }
 
 .left-bottom-main-second {
   display: flex;
   flex-direction: column;
 }
+
 .main-second-title,
 .course-first-title {
   font-family: "CyGrotesk";
   font-size: 50px;
   color: var(--black);
-  line-height: 0.95;
-  margin-bottom: 1.6vw;
+  line-height: 0.9;
+  margin-bottom: 24px;
 }
+
 .main-second-title span {
   color: var(--yellow);
 }
+
 .main-second-description {
   display: flex;
   flex-direction: column;
-  gap: 1vw;
-  font-size: 1.4vw;
-  line-height: 1.3;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 1.4;
   color: var(--grey);
-  width: 34vw;
-  margin-bottom: 3vw;
+  max-width: 480px;
+  margin-bottom: 40px;
 }
 
 .btn-blue {
   font-family: "InterMedium";
   background: var(--lightblue2);
   border-radius: 100px;
-  padding: 1.2vw 2vw;
+  padding: 16px 28px;
   color: var(--white);
   border: none;
   text-decoration: none;
-  font-size: 1.4vw;
+  font-size: 20px;
   transition:
     transform 0.2s,
-    box-shadow 0.2s;
+    background 0.2s;
 }
+
 .btn-blue:hover {
   background-color: var(--black);
   color: var(--white);
-  transition:
-    border-color 0.2s,
-    background 0.2s;
 }
+
 .main-second-btns {
-  display: flex;
-  font-family: "Unbounded";
-  gap: 1vw;
-  flex-wrap: wrap;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: "Unbounded";
+  cursor: pointer;
 }
 
 .right-main-second {
   display: flex;
   flex-direction: column;
-  gap: 1vw;
-  padding-top: 11vw;
+  gap: 12px;
+  padding-top: 140px;
+  flex: 1;
 }
+
 .top-right-main-second {
   display: flex;
   flex-direction: row;
-  gap: 1.3vw;
+  gap: 16px;
 }
 
 .bottom-right-main-second {
   display: flex;
   flex-direction: row;
-  gap: 1vw;
+  gap: 12px;
 }
 
 .stat-box {
   background: var(--lightblue2);
-  border-radius: 1vw;
-  padding: 4vw 7vw 3vw 1vw;
+  border-radius: 16px;
+  padding: 40px 60px 30px 16px;
+  flex: 1;
 }
+
 .stat-box2 {
   background: var(--lightblue2);
-  border-radius: 1vw;
-  padding: 4vw 10.9vw 3vw 1vw;
+  border-radius: 16px;
+  padding: 40px 80px 30px 16px;
+  flex: 1;
 }
 
 .stat-number {
   font-family: "Unbounded";
-  font-size: 4vw;
+  font-size: 50px;
   letter-spacing: -2px;
   color: var(--yellow);
-  margin-bottom: 0.2vw;
+  margin-bottom: 4px;
 }
 
 .stat-label {
-  font-size: 0.8vw;
+  font-size: 13px;
   color: var(--lightblue);
   line-height: 1.4;
 }
@@ -460,31 +470,31 @@ nav a.always-active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6vw;
+  padding: 80px;
   background: var(--darkblue);
+  box-sizing: border-box;
 }
 
 .study-format-content {
   flex: 1;
-  max-width: 48vw;
+  max-width: 48%;
 }
 
 .study-format-label {
   display: inline-block;
-  padding: 0.6vw 1vw;
+  padding: 8px 16px;
   border-radius: 30px;
   color: var(--white);
   background: var(--lightblue2);
-  font-size: 0.8vw;
-  margin-bottom: 1.8vw;
+  font-size: 13px;
+  margin-bottom: 24px;
 }
 
 .study-format-title {
   font-family: "CyGrotesk";
-  font-size: 3.4vw;
+  font-size: 50px;
   line-height: 0.95;
-  font-weight: 800;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 30px;
 }
 
@@ -495,7 +505,7 @@ nav a.always-active {
 
 .changing-word {
   display: block;
-  min-height: 1.1em;
+  min-height: 18px;
   opacity: 1;
   transform: translateY(0);
   transition:
@@ -509,94 +519,95 @@ nav a.always-active {
 }
 
 .study-format-text {
-  font-size: 1.4vw;
+  font-size: 20px;
   color: var(--lightblue);
-  margin-bottom: 3vw;
-  width: 34vw;
+  margin-bottom: 40px;
+  max-width: 480px;
+  line-height: 1.4;
 }
 
 .features {
   display: flex;
   flex-direction: column;
-  gap: 1.2vw;
-  margin-bottom: 2vw;
+  gap: 16px;
+  margin-bottom: 28px;
 }
 
 .feature {
   display: flex;
   align-items: flex-start;
-  gap: 1vw;
-  padding: 1.2vw;
-  border-radius: 2vw;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 24px;
   background: var(--lightblue3);
   border: 1px solid var(--lightblue2);
 }
 
 .feature-icon {
-  width: 4vw;
-  height: 4vw;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1vw;
+  border-radius: 12px;
   background: var(--yellow);
-  font-size: 2vw;
+  font-size: 30px;
 }
 
 .feature h3 {
   font-family: "Unbounded";
   color: var(--white);
-  margin-bottom: 0.4vw;
-  font-size: 1.4vw;
+  margin-bottom: 6px;
+  font-size: 20px;
 }
 
 .feature p {
   color: var(--lightblue);
-  font-size: 1.2vw;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .btn-yellow1 {
   font-family: "InterMedium";
   background: var(--yellow);
   border-radius: 100px;
-  padding: 1.2vw 2vw;
+  padding: 16px 28px;
   color: var(--black);
   border: none;
   text-decoration: none;
-  font-size: 1.4vw;
+  font-size: 20px;
   transition:
-    border-color 0.2s,
-    background 0.2s;
+    background 0.2s,
+    color 0.2s;
 }
+
 .btn-yellow1:hover {
   background-color: var(--black);
   color: var(--white);
-  transition:
-    border-color 0.2s,
-    background 0.2s;
 }
 
 .main-third-btns {
-  display: flex;
-  font-family: "Unbounded";
-  gap: 1vw;
-  flex-wrap: wrap;
-  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: "Unbounded";
+  cursor: pointer;
 }
 
 .card-main-third {
   position: absolute;
-  top: 20vw;
-  left: 60vw;
-  width: 35vw;
+  top: 33%;
+  left: 58%;
+  width: 36vw;
   animation: floatCard 6s ease-in-out infinite;
 }
+
 .stroke-main-third {
   position: absolute;
-  top: 11vw;
-  left: 56vw;
+  top: 19%;
+  left: 49%;
   width: 12vw;
 }
 
@@ -607,37 +618,44 @@ nav a.always-active {
   padding: 4vw 0 5vw;
   overflow: hidden;
 }
+
 .main-forth-label {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   font-family: "InterBold";
-  width: 8vw;
+  width: max-content;
   background: var(--yellow);
   border-radius: 100px;
   color: var(--black);
-  padding: 0.7vw 1vw 0.6vw 1vw;
+  padding: 0.7vw 1.2vw 0.6vw 1.2vw;
   font-size: 0.8vw;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0 0 1.5vw 6vw;
+  white-space: nowrap;
 }
+
 .main-forth-title {
   font-family: "CyGrotesk";
   font-size: 3.4vw;
   color: #fff;
   margin: 0 0 4vw 6vw;
 }
+
 .carousel-wrap {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
+
 .carousel-track {
   display: flex;
-  gap: 1.17vw;
+  gap: 20px;
   will-change: transform;
   padding: 8px 0 16px;
 }
+
 .card {
   flex: 0 0 380px;
   min-width: 0;
@@ -645,6 +663,7 @@ nav a.always-active {
   border-radius: 20px;
   overflow: hidden;
 }
+
 .card-img {
   width: 100%;
   height: 16vw;
@@ -654,6 +673,7 @@ nav a.always-active {
   font-size: 5vw;
   position: relative;
 }
+
 .card-date {
   position: absolute;
   font-family: "Unbounded";
@@ -665,30 +685,34 @@ nav a.always-active {
   border-radius: 9px;
   padding: 0.7vw 1vw;
 }
+
 .card-body {
   padding: 20px;
   border-radius: 0px 0px 20px 20px;
   border: 2px solid var(--grey2);
   height: 200px;
+  display: flex;
+  flex-direction: column;
 }
+
 .card-tag {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.2em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #888;
-  letter-spacing: 0.2em;
+  color: var(--grey5);
 }
 
 .card-title {
   font-family: "Unbounded";
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   line-height: 1.3;
   margin-bottom: 10px;
 }
+
 .card-desc {
   font-family: "InterRegular";
   font-size: 0.8vw;
@@ -696,33 +720,50 @@ nav a.always-active {
   line-height: 1.6;
   margin-bottom: 1vw;
   min-height: 2vw;
+  flex: 1;
 }
+
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
+
 .card-seats {
   font-size: 13px;
-  color: #888;
+  color: var(--grey5);
   display: flex;
   align-items: center;
   gap: 7px;
 }
+
 .card-seats::before {
   content: "";
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #555;
+  background: var(--grey3);
   display: inline-block;
+  flex-shrink: 0;
 }
+
 .card-btn {
   border: none;
   border-radius: 10px;
   padding: 10px 22px;
   font-size: 0.9vw;
   cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    filter 0.2s,
+    opacity 0.2s;
+}
+
+.card-btn:hover {
+  filter: brightness(1.15);
 }
 
 .main-forth-btns {
@@ -737,99 +778,51 @@ nav a.always-active {
   text-decoration: none;
   color: var(--white);
   border: 2px solid var(--grey);
+  display: inline-block;
   transition:
     border-color 0.2s,
     background 0.2s;
 }
+
 .btn-transparent2:hover {
   border-color: var(--white);
   background: var(--grey);
 }
+
 .transition-forth-right,
 .transition-forth-left {
   position: absolute;
   z-index: 4;
   width: 41vw;
+  pointer-events: none;
 }
+
 .transition-forth-right {
-  top: 14vw;
+  top: 28%;
   left: 60vw;
 }
+
 .transition-forth-left {
-  top: 14vw;
+  top: 28%;
   left: 0;
 }
 
 /* ПЯТЫЙ ЭКРАН */
 .main-fifth {
-  height: 45vw;
-}
-.faq-list {
-  max-width: 49vw;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7vw;
-}
-.faq-item {
-  background: var(--white);
-  border: 1px solid var(--gray2);
-  border-radius: 1vw;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-}
-.faq-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 66, 255, 0.08);
-}
-.faq-question {
-  padding: 1vw 2vw;
-  font-size: 1.3vw;
-  color: var(--white);
-  background-color: var(--darkblue);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1vw;
-  user-select: none;
-}
-.faq-arrow {
-  font-size: 2vw;
-  color: var(--white);
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-.faq-item.open .faq-arrow {
-  transform: rotate(45deg);
-}
-.faq-answer {
-  padding: 0 2vw;
-  font-size: 1vw;
-  color: var(--lightblue);
-  background-color: var(--darkblue);
-  line-height: 1.7;
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.3s ease,
-    padding 0.3s;
-}
-.faq-item.open .faq-answer {
-  max-height: 6vw;
-  padding: 0 2vw 1vw;
+  min-height: 600px;
+  box-sizing: border-box;
 }
 
 .full-main-fifth-label {
   text-align: center;
-  margin-bottom: 3vw;
-  padding-top: 4vw;
+  margin-bottom: 40px;
+  padding-top: 56px;
 }
 
 .fifth-label {
   display: inline-flex;
   align-items: center;
   font-family: "InterBold";
-  width: 108px;
   background: var(--blue2);
   border: 1px solid var(--lightblue2);
   border-radius: 100px;
@@ -838,12 +831,70 @@ nav a.always-active {
   font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 1vw;
+  margin-bottom: 16px;
+  width: fit-content;
 }
+
 .fifth-h2 {
   font-family: "CyGrotesk";
-  font-size: 3.4vw;
+  font-size: 50px;
   color: var(--black);
+}
+
+.faq-list {
+  max-width: 720px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 60px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--gray2);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 16px var(--darkblue2);
+}
+
+.faq-question {
+  padding: 16px 28px;
+  font-size: 20px;
+  color: var(--white);
+  background-color: var(--darkblue);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-item.open .faq-arrow {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 28px;
+  font-size: 16px;
+  color: var(--lightblue);
+  background-color: var(--darkblue);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 28px 16px;
 }
 
 /* ШЕСТОЙ ЭКРАН */
@@ -977,14 +1028,14 @@ nav a.always-active {
 
 .stroke-free {
   position: absolute;
-  top: 12vw;
-  left: 9vw;
+  top: 6vw;
+  left: 4vw;
   width: 11vw;
 }
 .stroke-one-hour {
   position: absolute;
-  top: 31vw;
-  left: 78vw;
+  top: 26vw;
+  left: 81vw;
   width: 15vw;
 }
 
@@ -1106,7 +1157,7 @@ li {
 
 .course-first {
   padding: 0 80px 1vw 80px;
-  margin-top: 77px;
+  margin-top: 100px;
 }
 
 .course-first-label {
@@ -1140,7 +1191,6 @@ li {
   cursor: pointer;
   transition: all 0.2s;
   color: var(--grey3);
-  white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -1180,10 +1230,10 @@ li {
 }
 
 .card-course {
-  background: #fff;
+  background: var(--white);
   border-radius: 16px;
   overflow: hidden;
-  border: 2px solid #e8e8e8;
+  border: 2px solid var(--grey9);
   transition:
     transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.25s ease;
@@ -1193,7 +1243,7 @@ li {
 
 .card-course:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--darkblue);
 }
 
@@ -1250,7 +1300,7 @@ li {
   color: var(--black);
   margin-bottom: 8px;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -1px;
 }
 
 .card-course-desc {
@@ -1295,12 +1345,10 @@ li {
   font-size: 18px;
   font-family: "Unbounded";
   color: var(--black);
-  white-space: nowrap;
 }
 
 .price span {
   font-size: 13px;
-  font-weight: 400;
   color: var(--grey5);
   font-family: "InterRegular";
 }
@@ -1312,13 +1360,11 @@ li {
   padding: 9px 18px;
   border-radius: 8px;
   font-size: 13px;
-  font-weight: 600;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: "InterRegular";
   transition:
     background 0.18s,
     transform 0.1s;
-  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -1359,11 +1405,11 @@ li {
 
 .course-second-title {
   font-family: "CyGrotesk";
-  font-size: 60px;
+  font-size: 50px;
   color: var(--darkblue);
   text-align: center;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -1px;
   margin-bottom: 18px;
 }
 
@@ -1409,7 +1455,6 @@ li {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0);
   transition: background 0.2s ease;
   border-radius: inherit;
 }
@@ -1417,10 +1462,6 @@ li {
 .course-second-lang-btn:hover {
   background: var(--darkblue2);
   transform: translateY(-2px);
-}
-
-.course-second-lang-btn:hover::after {
-  background: rgba(255, 255, 255, 0.04);
 }
 
 .course-second-lang-btn:active {
@@ -1434,8 +1475,7 @@ li {
 
 .course-second-lang-name {
   font-family: "Unbounded";
-  font-weight: 800;
-  font-size: clamp(18px, 3.5vw, 22px);
+  font-size: 22px;
   letter-spacing: 0.01em;
   line-height: 1;
 }
@@ -1460,15 +1500,6 @@ li {
 .course-second-stroke {
   width: 20px;
   height: 20px;
-}
-
-.course-second-ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(0);
-  animation: ripple-anim 0.55s linear;
-  pointer-events: none;
 }
 
 /* <!---------------------------- МЕРЧ ------------------------------> */
@@ -1546,7 +1577,7 @@ li {
 
 .card-merch:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--darkblue);
 }
 
@@ -1571,14 +1602,14 @@ li {
 }
 
 .card-merch-img .emoji {
-  font-size: clamp(56px, 8vw, 80px);
+  font-size: 80px;
   line-height: 1;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
   transition: transform 0.22s ease;
 }
 
 .card-merch:hover .emoji {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .label {
@@ -1645,7 +1676,6 @@ li {
   transition:
     background 0.2s,
     transform 0.1s;
-  white-space: nowrap;
   flex-shrink: 0;
 }
 .btn-cart-merch:hover {
@@ -1679,16 +1709,12 @@ li {
   position: fixed;
   top: 0;
   right: 0;
-
   width: 440px;
   min-height: 90vh;
-
-  background: white;
+  background: var(--white);
   z-index: 100;
-
   transition: right 0.3s ease;
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
-
   display: flex;
   flex-direction: column;
 }
@@ -1729,7 +1755,6 @@ li {
   display: flex;
   flex-direction: column;
   gap: 25px;
-
   padding: 25px 14px;
 }
 
@@ -1738,7 +1763,6 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   font-family: "InterBold";
   font-size: 20px;
 }
@@ -1763,21 +1787,23 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   font-family: "Unbounded";
   font-size: 14px;
 }
 
 .cart-process-order-btn {
   background-color: var(--darkblue);
-  color: white;
-
+  color: var(--white);
   padding: 6px 0;
   border-radius: 45px;
   border: none;
-
-  font-family: "InterRegular";
+  font-family: "Unbounded";
   font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+.cart-process-order-btn:hover {
+  background-color: var(--darkblue2);
 }
 /* <!---------------------------- ИВЕНТЫ ------------------------------> */
 
@@ -1832,7 +1858,7 @@ li {
 
 .calendar-month {
   font-family: "Unbounded";
-  font-size: clamp(30px, 4.5vw, 52px);
+  font-size: 50px;
   color: var(--white);
   text-transform: uppercase;
   line-height: 1;
@@ -1851,26 +1877,19 @@ li {
   border-bottom: 2px solid var(--grey6);
 }
 
-.calendar-time-header {
-  padding: 12px 8px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
-  font-weight: 600;
-}
-
 .calendar-head-cell {
+  font-family: "InterRegular";
   text-align: center;
   font-size: 11px;
-  font-weight: 700;
   color: var(--grey5);
   padding: 12px 4px;
-  letter-spacing: 0.06em;
+  letter-spacing: 1px;
 }
 
 .calendar-head-cell .date-num {
+  font-family: "InterRegular";
   display: block;
   font-size: 16px;
-  font-weight: 700;
   color: var(--grey7);
   margin-top: 2px;
 }
@@ -1882,7 +1901,7 @@ li {
   width: 30px;
   height: 30px;
   background: var(--black);
-  color: #fff;
+  color: var(--white);
   border-radius: 50%;
   font-size: 14px;
 }
@@ -1933,7 +1952,7 @@ li {
   transform: scale(1.04);
 }
 .event-card:focus-visible {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 .event-card:active {
   transform: scale(0.97);
@@ -1958,10 +1977,10 @@ li {
 }
 
 .event-card.green .event-name {
-  color: var(--lime-text);
+  color: var(--black);
 }
 .event-card.blue-card .event-name {
-  color: #fff;
+  color: var(--white);
 }
 
 .event-time {
@@ -1970,10 +1989,10 @@ li {
 }
 
 .event-card.green .event-time {
-  color: #3a5c00;
+  color: var(--darkyellow);
 }
 .event-card.blue-card .event-time {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--lightblue);
 }
 
 .overlay {
@@ -1998,9 +2017,9 @@ li {
 }
 
 .window {
-  background: #fff;
+  background: var(--white);
   border-radius: 22px;
-  padding: clamp(22px, 3vw, 36px);
+  padding: 22px;
   max-width: 420px;
   width: 100%;
   position: relative;
@@ -2014,11 +2033,6 @@ li {
   transform: scale(1) translateY(0);
 }
 
-.window-close:focus-visible {
-  box-shadow: 0 0 0 3px rgba(37, 99, 255, 0.3);
-  outline: none;
-}
-
 .window-badge {
   display: inline-block;
   font-family: "InterBold";
@@ -2026,7 +2040,7 @@ li {
   padding: 5px 14px;
   border-radius: 30px;
   margin-bottom: 16px;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
 }
 
 .window-badge.green {
@@ -2035,7 +2049,7 @@ li {
 }
 .window-badge.blue-card {
   background: var(--blue);
-  color: #fff;
+  color: var(--white);
 }
 
 .window-title {
@@ -2054,7 +2068,7 @@ li {
   gap: 9px;
   margin: 18px 0;
   padding: 18px;
-  background: #f8f9ff;
+  background: var(--gray4);
   border-radius: 14px;
 }
 
@@ -2070,7 +2084,6 @@ li {
   font-size: 15px;
   color: var(--blue);
   width: 16px;
-  flex-shrink: 0;
 }
 
 .window-desc {
@@ -2193,14 +2206,13 @@ li {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--white);
   border-radius: 100px;
   padding: 6px 14px;
   font-size: 12px;
   font-weight: 600;
-  color: #222;
+  color: var(--black);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .backgrond-blue {
@@ -2291,7 +2303,6 @@ li {
   border-radius: 100px;
   padding: 5px 13px;
   font-size: 11.5px;
-  font-weight: 500;
 }
 
 .btn-join {
@@ -2302,7 +2313,6 @@ li {
   padding: 10px 22px;
   font-size: 13px;
   cursor: pointer;
-  white-space: nowrap;
   flex-shrink: 0;
   transition:
     background 0.15s,
@@ -2410,10 +2420,10 @@ li {
 
 .about-second-title {
   font-family: "CyGrotesk";
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: 50px;
   text-transform: uppercase;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: 1px;
   margin-bottom: 16px;
 }
 
@@ -2436,7 +2446,7 @@ li {
   align-items: center;
   gap: 8px;
   background: var(--white);
-  border: 1.5px solid #d8d8d4;
+  border: 1.5px solid var(--gray4);
   border-radius: 13px;
   padding: 10px 20px;
   color: var(--black);
@@ -2476,7 +2486,7 @@ li {
   background: var(--darkblue);
   color: var(--white);
   font-size: 11px;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 9px 19px;
   border-radius: 999px;
@@ -2485,7 +2495,7 @@ li {
 
 .about-third-title {
   font-family: "CyGrotesk";
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: 50px;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: -1px;
@@ -2505,11 +2515,6 @@ li {
     box-shadow 0.2s;
 }
 
-.about-third-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(55, 48, 245, 0.1);
-}
-
 .about-third-avatar {
   width: 72px;
   height: 72px;
@@ -2520,14 +2525,13 @@ li {
   justify-content: center;
   font-size: 32px;
   margin-bottom: 18px;
-  flex-shrink: 0;
 }
 
 .about-third-name {
   font-family: "Unbounded";
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 2px;
   color: var(--black);
   margin-bottom: 6px;
   line-height: 1.3;
@@ -2573,7 +2577,6 @@ li {
   margin-bottom: 30px;
   position: relative;
   z-index: 1;
-  width: 500px;
 }
 
 .about-forth-btn {
@@ -2621,19 +2624,16 @@ li {
 }
 
 .study-first-label {
-  display: inline-flex;
-  align-items: center;
-  font-family: "InterBold";
-  width: 6.8vw;
-  background: var(--blue2);
-  border: 1px solid var(--lightblue2);
-  border-radius: 100px;
+  display: inline-block;
+  background: var(--darkblue);
   color: var(--white);
-  padding: 0.6vw 1vw;
-  font-size: 0.8vw;
-  letter-spacing: 0.05em;
+  font-family: "InterSemiBold";
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 1vw;
+  padding: 9px 19px;
+  border-radius: 999px;
+  margin-bottom: 20px;
 }
 
 .study-first-title {
@@ -2677,7 +2677,7 @@ li {
   right: 22px;
   font-family: "Unbounded";
   font-size: 60px;
-  letter-spacing: -0.04em;
+  letter-spacing: -2px;
   opacity: 0.15;
   line-height: 1;
   user-select: none;
@@ -2735,25 +2735,23 @@ li {
 }
 
 .study-second-label {
-  display: inline-flex;
-  align-items: center;
-  font-family: "InterBold";
-  background: var(--blue2);
-  border: 1px solid var(--lightblue2);
-  border-radius: 100px;
+  display: inline-block;
+  background: var(--darkblue);
   color: var(--white);
-  padding: 6px 14px;
-  font-size: 12px;
-  letter-spacing: 0.05em;
+  font-family: "InterSemiBold";
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  padding: 9px 19px;
+  border-radius: 999px;
+  margin-bottom: 20px;
 }
 
 .study-second-title {
   font-family: "CyGrotesk";
   font-size: 45px;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -1px;
   margin-bottom: 12px;
   width: 100%;
   max-width: 800px;
@@ -2814,9 +2812,9 @@ li {
 
 .study_second_card {
   position: absolute;
-  left: 57vw;
-  top: 8vw;
-  width: 500px;
+  left: 50vw;
+  top: 267px;
+  width: 1500px;
   max-width: 40vw;
   animation: floatCard 6s ease-in-out infinite;
 }
@@ -2896,7 +2894,7 @@ li {
 .error-404-top {
   font-family: "InterRegular";
   font-size: 12px;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
   color: var(--lightblue);
   text-transform: uppercase;
 }
@@ -2912,7 +2910,7 @@ li {
 .error-404-small-text {
   font-family: "InterRegular";
   font-size: 15px;
-  letter-spacing: 0.12em;
+  letter-spacing: 1px;
   color: var(--lightblue);
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -2929,7 +2927,7 @@ li {
 .error-404-msg {
   font-family: "InterBold";
   font-size: 18px;
-  letter-spacing: 0.06em;
+  letter-spacing: 1px;
   color: var(--yellow);
   text-transform: uppercase;
   margin-top: 28px;
@@ -2943,7 +2941,7 @@ li {
   color: var(--black);
   font-size: 13px;
   width: 277px;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 14px 32px;
   border-radius: 3px;
@@ -2958,4 +2956,84 @@ li {
 .error-404-btn:hover {
   transform: scale(1.04);
   box-shadow: 0 8px 28px var(--darkyellow);
+}
+
+/* * <!---------------------------- БОКОВОЕ МЕНЮ ------------------------------> */
+.side-menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  min-height: 90vh;
+  background: var(--blue);
+  color: var(--white);
+  z-index: 100;
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu-container.hidden {
+  right: -500px;
+}
+
+.side-menu-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 14px 14px;
+  border-bottom: solid 3px var(--gray4);
+}
+
+.side-menu-header h2 {
+  font-family: "CyGrotesk";
+  font-size: 30px;
+}
+
+.close-side-menu-btn {
+  padding: 3px 7px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  transition: ease-in-out 0.3s all;
+}
+
+.close-side-menu-btn:hover {
+  scale: 1.2;
+  opacity: 180%;
+}
+
+.side-menu-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+}
+
+.side-menu-nav a {
+  font-size: 20px;
+}
+
+.side-menu-nav a.active {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.side-menu-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 14px;
+  border-top: solid 3px var(--gray4);
+}
+
+.side-menu-footer-label {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Unbounded";
 }

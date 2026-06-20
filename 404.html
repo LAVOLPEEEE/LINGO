@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
   </head>
   <body class="body">
     <section class="error-404">
-      <div class="error-404-top">LINGO / страница не найдена</div>
+      <div class="error-404-top" data-lang="error-404-top.text">
+        LINGO / страница не найдена
+      </div>
 
       <div class="error-404-center">
-        <div class="error-404-small-text">Ошибка</div>
+        <div class="error-404-small-text" data-lang="error-404-small.text">
+          Ошибка
+        </div>
         <span class="error-404-big">404</span>
-        <div class="error-404-msg">#страницы не существует</div>
-        <a class="error-404-btn" href="index.html">← Вернуться назад</a>
+        <div class="error-404-msg" data-lang="error-404-top.msg">
+          #страницы не существует
+        </div>
+        <a class="error-404-btn" data-lang="error-404.btn" href="index.html"
+          >← Вернуться назад</a
+        >
       </div>
     </section>
+    <script type="module" src="javascripts/localization.js"></script>
   </body>
 </html>

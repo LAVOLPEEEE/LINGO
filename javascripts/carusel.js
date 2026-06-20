@@ -56,19 +56,39 @@ const gap = 20;
 const copies = 5;
 const cardCount = cards.length;
 
+const mobilePeek = 18;
+const mobileGap = 12;
+
+function isMobile() {
+  return window.innerWidth <= 600;
+}
+
 function getCardWidth() {
-  if (window.innerWidth <= 600) {
-    return 300;
+  if (isMobile()) {
+    return wrapper.clientWidth - mobilePeek * 2 - mobileGap * 0.6;
   }
   return 380;
 }
 
+function getGap() {
+  return isMobile() ? mobileGap : gap;
+}
+
 function getStep() {
-  return getCardWidth() + gap;
+  return getCardWidth() + getGap();
 }
 
 function getCenterOffset() {
   return (wrapper.clientWidth - getCardWidth()) / 2;
+}
+
+function applyResponsiveSizing() {
+  track.style.gap = getGap() + "px";
+
+  const width = getCardWidth();
+  allCards.forEach((card) => {
+    card.style.flexBasis = width + "px";
+  });
 }
 
 function createCard(card) {
@@ -80,15 +100,15 @@ function createCard(card) {
       <span class="card-date">${getCurrentTranslation(card.date)}</span>
       <span>${card.emoji}</span>
     </div>
-
+ 
     <div class="card-body">
       <div class="card-tag">${getCurrentTranslation(card.tag)}</div>
       <div class="card-title">${getCurrentTranslation(card.title)}</div>
       <div class="card-desc">${getCurrentTranslation(card.desc)}</div>
-
+ 
       <div class="card-footer">
         <span class="card-seats">${getCurrentTranslation(card.seats)}</span>
-        <button class="card-btn">${getCurrentTranslation("card.btn")}</button>
+        <a href="events.html" class="card-btn">${getCurrentTranslation("card.btn")}</a>
       </div>
     </div>
   `;
@@ -173,6 +193,7 @@ function initSlider() {
 
   currentCard = Math.floor(copies / 2) * cardCount;
 
+  applyResponsiveSizing();
   updateSlider(false);
 }
 
@@ -206,8 +227,13 @@ wrapper.addEventListener("touchend", (event) => {
   startAutoSlide();
 });
 
+let resizeTimer;
 window.addEventListener("resize", () => {
-  updateSlider(false);
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    applyResponsiveSizing();
+    updateSlider(false);
+  }, 80);
 });
 
 window.refreshSlider = function () {
@@ -221,3 +247,6 @@ window._sliderReady = true;
 if (window._pendingSliderRefresh) {
   window.refreshSlider();
 }
+
+initSlider();
+startAutoSlide();

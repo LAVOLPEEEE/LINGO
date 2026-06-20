@@ -78,6 +78,11 @@ async function loadLanguage(lang) {
     window.updateCourseCartTexts();
   }
 
+  // Обновляем текущее слово в анимации смены слов (changing-word)
+  if (typeof window.refreshChangingWord === "function") {
+    window.refreshChangingWord();
+  }
+
   if (window._sliderReady) {
     window.refreshSlider();
   } else {

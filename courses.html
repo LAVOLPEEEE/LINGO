@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Курсы</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
   </head>
-  <body>
+  <body data-page="courses">
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
@@ -131,8 +140,10 @@
               >
             </div>
             <div class="card-course-footer">
-              <div class="price">
-                <span data-lang="course-english-life.price">4 900 ₽ </span>
+              <div>
+                <span class="price" data-lang="course-english-life.price"
+                  >4 900 ₽
+                </span>
                 <span data-lang="course-price-mouth">/мес</span>
               </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
@@ -151,19 +162,42 @@
             <p class="level-label">B1+</p>
           </div>
           <div class="card-course-body">
-            <div class="lang-label">Бизнес-английский</div>
-            <div class="card-course-title">English for Business</div>
-            <div class="card-course-desc">
+            <div class="lang-label" data-lang="course-english-business.label">
+              Бизнес-английский
+            </div>
+            <div
+              class="card-course-title"
+              data-lang="course-english-business.title"
+            >
+              English for Business
+            </div>
+            <div
+              class="card-course-desc"
+              data-lang="course-english-business.desc"
+            >
               Переговоры, презентации, деловая переписка. Реальные кейсы для
               бизнеса.
             </div>
             <div class="card-course-meta">
-              <span class="meta-item">📅 2 раза/нед</span>
-              <span class="meta-item">👥 до 8 чел</span>
-              <span class="meta-item">⏱️ 4 мес</span>
+              <span class="meta-item" data-lang="course-english-business.period"
+                >📅 2 раза/нед</span
+              >
+              <span class="meta-item" data-lang="course-english-business.people"
+                >👥 до 8 чел</span
+              >
+              <span
+                class="meta-item"
+                data-lang="course-english-business.duration"
+                >⏱️ 4 мес</span
+              >
             </div>
             <div class="card-course-footer">
-              <div class="price">6 500 ₽ <span>/мес</span></div>
+              <div>
+                <span class="price" data-lang="course-english-business.price"
+                  >6 500 ₽
+                </span>
+                <span data-lang="course-price-mouth">/мес</span>
+              </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
               </button>
@@ -204,8 +238,11 @@
               >
             </div>
             <div class="card-course-footer">
-              <div class="price" data-lang="course-german.price">
-                5 200 ₽ <span>/мес</span>
+              <div>
+                <span class="price" data-lang="course-german.price"
+                  >5 200 ₽</span
+                >
+                <span data-lang="course-price-mouth">/мес</span>
               </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
@@ -248,8 +285,11 @@
               >
             </div>
             <div class="card-course-footer">
-              <div class="price" data-lang="course-french.price">
-                4 900 ₽ <span>/мес</span>
+              <div>
+                <span class="price" data-lang="course-french.price"
+                  >4 900 ₽</span
+                >
+                <span data-lang="course-price-mouth">/мес</span>
               </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
@@ -294,8 +334,11 @@
               >
             </div>
             <div class="card-course-footer">
-              <div class="price" data-lang="course-spanish.price">
-                4 900 ₽ <span>/мес</span>
+              <div>
+                <span class="price" data-lang="course-spanish.price"
+                  >4 900 ₽</span
+                >
+                <span data-lang="course-price-mouth">/мес</span>
               </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
@@ -339,8 +382,11 @@
               >
             </div>
             <div class="card-course-footer">
-              <div class="price" data-lang="course-chinese.price">
-                5 800 ₽ <span>/мес</span>
+              <div>
+                <span class="price" data-lang="course-chinese.price"
+                  >5 800 ₽</span
+                >
+                <span data-lang="course-price-mouth">/мес</span>
               </div>
               <button class="btn-cart" data-lang="course-button-cart-add">
                 В корзину
@@ -486,8 +532,18 @@
           </p>
         </div>
       </div>
-      <img class="stroke-free" src="images/stroke-free.svg" alt="" />
-      <img class="stroke-one-hour" src="images/stroke-one-hour.svg" alt="" />
+      <img
+        class="stroke-free"
+        data-lang-img="stroke-free.yellow"
+        src="images/stroke-free_ru.svg"
+        alt=""
+      />
+      <img
+        class="stroke-one-hour"
+        data-lang-img="stroke-one-hour.yellow"
+        src="images/stroke-one-hour_ru.svg"
+        alt=""
+      />
     </section>
 
     <footer>
@@ -495,40 +551,46 @@
         <div class="footer-top">
           <div>
             <div class="footer-logo">LINGO</div>
-            <p class="footer-desc">
+            <p class="footer-desc" data-lang="footer.desc">
               Глобальная языковая школа для людей любого возраста и
               возможностей. Делаем языки доступными для каждого.
             </p>
             <div class="footer-countries">
-              <span class="footer-little-desc"
+              <span class="footer-little-desc" data-lang="footer.cities"
                 >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
               >
             </div>
           </div>
           <div class="footer-col">
-            <h4>Обучение</h4>
+            <h4 data-lang="footer.col1-title">Обучение</h4>
             <ul class="footer-links">
-              <li><a href="courses.html">Курсы</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
               <li>
-                <a href="study.html">Личный кабинет</a>
+                <a href="study.html" data-lang="footer.cabinet"
+                  >Личный кабинет</a
+                >
               </li>
-              <li><a href="events.html">Ивенты</a></li>
+              <li><a href="events.html" data-lang="nav.events">Ивенты</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Школа</h4>
+            <h4 data-lang="footer.col2-title">Школа</h4>
             <ul class="footer-links">
-              <li><a href="about.html">О нас</a></li>
-              <li><a href="merch.html">Мерч</a></li>
-              <li><a href="courses.html">Курсы</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Дизайн</h4>
-            <ul class="footer-links">
-              <li><a href="#">Б25ДЗ09</a></li>
               <li>
-                <a href="https://www.behance.net/polinaklimova2"
+                <a href="about.html" data-lang="footer.about-us">О нас</a>
+              </li>
+              <li><a href="merch.html" data-lang="nav.merch">Мерч</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col3-title">Дизайн</h4>
+            <ul class="footer-links">
+              <li><a data-lang="footer.group" href="#">Б25ДЗ09</a></li>
+              <li>
+                <a
+                  data-lang="footer.name"
+                  href="https://www.behance.net/polinaklimova2"
                   >Полина Климова</a
                 >
               </li>
@@ -536,7 +598,9 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="footer-copy">© 2026 LINGO. Все права защищены.</p>
+          <p class="footer-copy" data-lang="footer.copy">
+            © 2026 LINGO. Все права защищены.
+          </p>
           <div class="footer-social">
             <a href="#" class="social-btn">📱</a>
             <a href="#" class="social-btn">✈️</a>
@@ -551,6 +615,7 @@
 
     <script src="javascripts/filter-for-courses.js"></script>
     <script src="javascripts/header.js"></script>
+    <script src="javascripts/load-sidemenu.js"></script>
     <script src="javascripts/cart-course.js"></script>
     <script src="javascripts/cart.js"></script>
     <script src="javascripts/cart-merch.js"></script>

@@ -69,6 +69,10 @@ export default {
 
   "img.main-third-card": "images/main_third_card_en.svg",
 
+  "changingWord.0": "convenient",
+  "changingWord.1": "flexible",
+  "changingWord.2": "successful",
+
   /* <!------------- ЧЕТВЁРТЫЙ ЭКРАН -----------> */
   "main-forth.label": "Activities",
   "main-forth.title": "Events every month",
@@ -107,6 +111,8 @@ export default {
   "card.event5.desc":
     "Watch a film in the original, discuss it together — no subtitles.",
   "card.event5.seats": "30 spots",
+
+  "card.btn": "Join",
 
   /* <!------------- ПЯТЫЙ ЭКРАН -----------> */
   "main-fifth.label": "FAQ",
@@ -155,6 +161,8 @@ export default {
   "footer.about-us": "About us",
   "footer.col3-title": "Design",
   "footer.copy": "© 2026 LINGO. All rights reserved.",
+  "footer.name": "Polina Klimova",
+  "footer.group": "B25DS09",
 
   /* <!---------------------------- О ШКОЛЕ ------------------------------> */
   /* <!------------- ПЕРВЫЙ ЭКРАН -----------> */
@@ -377,11 +385,16 @@ export default {
   "course-english-life.price": "67 $",
 
   "course-english-business.title": "English for Business",
+  "course-english-business.label": "English for Business",
+  "course-english-business.desc":
+    "Negotiations, presentations, business correspondence. Real-world cases for professionals.",
+  "course-english-business.period": "2 times/week",
+  "course-english-business.people": "up to 8 people",
+  "course-english-business.duration": "4 months",
   "course-english-business.price": "90 $ ",
 
   "course-german.label": "German",
   "course-german.title": "German from zero",
-  "course-german.price": "72 $ ",
   "course-german.desc":
     "A systematic approach to German: from the alphabet to fluent communication.",
   "course-german.period": "3 times/week",
@@ -422,11 +435,13 @@ export default {
   "course-second.sub":
     "Find out your language proficiency level to make it easier to choose a course.",
   "course-second.english": "English",
-  "course-second.Frenc": "French",
+  "course-second.french": "French",
   "course-second.german": "German",
 
   /* <!------------- ТРЕТИЙ ЭКРАН -----------> */
   "course-third.label": "Second step",
+  "img.stroke-one-hour.yellow": "images/stroke-one-hour_en.svg",
+  "img.stroke-free.yellow": "images/stroke-free_en.svg",
 
   /* <!---------------------------- МЕРЧ ------------------------------> */
 
@@ -441,35 +456,35 @@ export default {
   "merch-filter.clothes": "CLOTHES",
 
   "merch-tshirt-classic.title": "T-shirt LINGO Classic",
-  "merch-tshirt-classic.variants": "+ 12 colors",
+  "merch-tshirt-classic.variants": "80% cotton",
   "merch-tshirt-classic.price": "30 $",
 
   "merch-cap.title": "LINGO Logo Cap",
-  "merch-cap.variants": "+ 5 colors",
+  "merch-cap.variants": "20% linen",
   "merch-cap.price": "25 $",
 
   "merch-cup.title": "Cup 'Speak Up'",
-  "merch-cup.variants": "+ 2 colors",
+  "merch-cup.variants": "ceramics",
   "merch-cup.price": "13 $",
 
   "merch-hoody.title": "LINGO Oversized Hoodie",
-  "merch-hoody.variants": "+ 3 colors",
+  "merch-hoody.variants": "90% wool",
   "merch-hoody.price": "81 $",
 
   "merch-shopper.title": "LINGO Eco Shopper",
-  "merch-shopper.variants": "+ 2 colors",
+  "merch-shopper.variants": "60% linen",
   "merch-shopper.price": "11 $",
 
   "merch-notebook.title": "Notebook LINGO A5",
-  "merch-notebook.variants": "+ 2 colors",
+  "merch-notebook.variants": "40 pages",
   "merch-notebook.price": "9 $",
 
   "merch-jacket.title": "Jacket LINGO Shell",
-  "merch-jacket.variants": "+ 4 colors",
+  "merch-jacket.variants": "80% cotton",
   "merch-jacket.price": "54 $",
 
   "merch-shorts.title": "Shorts LINGO Summer",
-  "merch-shorts.variants": "+ 8 colors",
+  "merch-shorts.variants": "40% wool",
   "merch-shorts.price": "37 $",
 
   "merch-pen.title": "Pen LINGO Pack",
@@ -528,10 +543,28 @@ export default {
   "study-forth-list.desc":
     "Track your progress in grammar, vocabulary, and speaking skills through visual charts.",
 
+  "img.study_second.card": "images/study_second_card_en.svg",
+  "img.about-forth-stroke-one-hour.yellow": "images/stroke-one-hour-2_en.svg",
+  "img.about-forth-stroke-free.yellow": "images/stroke-free-2_en.svg",
+
   /* <!---------------------------- КОРЗИНА ------------------------------> */
 
   "cart.title": "Cart",
   "cart.currency": "$",
   "cart.final-price": "TOTAL",
   "cart.process-order-btn": "Process order",
+
+  "cart-courses-title": "Courses",
+  "cart-merch-title": "Merch",
+
+  /* <!---------------------------- БОКОВОЕ МЕНЮ --------------------------> */
+
+  "side-menu.title": "MENU",
+  "side-menu.footer-label": "Learn languages together",
+
+  /* <!---------------------------- 404 ОШИБКА ------------------------------> */
+  "error-404-top.text": "LINGO / Page not found",
+  "error-404-small.text": "Error",
+  "error-404-top.msg": "#page does not exist",
+  "error-404.btn": "← Go back",
 };

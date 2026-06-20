@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мерч</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
   </head>
-  <body>
+  <body data-page="merch">
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
@@ -110,7 +119,7 @@
               class="card-merch-variants"
               data-lang="merch-tshirt-classic.variants"
             >
-              + 12 расцветок
+              80% хлопок
             </div>
             <div class="card-merch-footer">
               <span
@@ -137,7 +146,7 @@
               Кепка LINGO Logo
             </div>
             <div data-lang="merch-cap.variants" class="card-merch-variants">
-              + 5 расцветок
+              20% лён
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-cap.price" class="card-merch-price"
@@ -159,7 +168,7 @@
               Кружка «Speak Up»
             </div>
             <div data-lang="merch-cup.variants" class="card-merch-variants">
-              + 2 расцветки
+              керамика
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-cup.price" class="card-merch-price"
@@ -185,7 +194,7 @@
               Худи LINGO Oversized
             </div>
             <div data-lang="merch-hoody.variants" class="card-merch-variants">
-              + 3 расцветки
+              90% шерсти
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-hoody.price" class="card-merch-price"
@@ -212,7 +221,7 @@
               Шопер LINGO Eco
             </div>
             <div data-lang="merch-shopper.variants" class="card-merch-variants">
-              + 2 расцветки
+              60% лён
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-shopper.price" class="card-merch-price"
@@ -242,7 +251,7 @@
               data-lang="merch-notebook.variants"
               class="card-merch-variants"
             >
-              + 2 расцветки
+              40 страниц
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-notebook.price" class="card-merch-price"
@@ -269,7 +278,7 @@
               Ветровка LINGO Shell
             </div>
             <div data-lang="merch-jacket.variants" class="card-merch-variants">
-              + 4 расцветки
+              80% хлопок
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-jacket.price" class="card-merch-price"
@@ -298,7 +307,7 @@
               Шорты LINGO Summer
             </div>
             <div data-lang="merch-shorts.variants" class="card-merch-variants">
-              + 6 расцветок
+              40% шерсти
             </div>
             <div class="card-merch-footer">
               <span data-lang="merch-shorts.price" class="card-merch-price"
@@ -340,40 +349,46 @@
         <div class="footer-top">
           <div>
             <div class="footer-logo">LINGO</div>
-            <p class="footer-desc">
+            <p class="footer-desc" data-lang="footer.desc">
               Глобальная языковая школа для людей любого возраста и
               возможностей. Делаем языки доступными для каждого.
             </p>
             <div class="footer-countries">
-              <span class="footer-little-desc"
+              <span class="footer-little-desc" data-lang="footer.cities"
                 >Москва · Санкт-Петербург · Казань · Пермь · Онлайн</span
               >
             </div>
           </div>
           <div class="footer-col">
-            <h4>Обучение</h4>
+            <h4 data-lang="footer.col1-title">Обучение</h4>
             <ul class="footer-links">
-              <li><a href="courses.html">Курсы</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
               <li>
-                <a href="study.html">Личный кабинет</a>
+                <a href="study.html" data-lang="footer.cabinet"
+                  >Личный кабинет</a
+                >
               </li>
-              <li><a href="events.html">Ивенты</a></li>
+              <li><a href="events.html" data-lang="nav.events">Ивенты</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Школа</h4>
+            <h4 data-lang="footer.col2-title">Школа</h4>
             <ul class="footer-links">
-              <li><a href="about.html">О нас</a></li>
-              <li><a href="merch.html">Мерч</a></li>
-              <li><a href="courses.html">Курсы</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Дизайн</h4>
-            <ul class="footer-links">
-              <li><a href="#">Б25ДЗ09</a></li>
               <li>
-                <a href="https://www.behance.net/polinaklimova2"
+                <a href="about.html" data-lang="footer.about-us">О нас</a>
+              </li>
+              <li><a href="merch.html" data-lang="nav.merch">Мерч</a></li>
+              <li><a href="courses.html" data-lang="nav.courses">Курсы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-lang="footer.col3-title">Дизайн</h4>
+            <ul class="footer-links">
+              <li><a data-lang="footer.group" href="#">Б25ДЗ09</a></li>
+              <li>
+                <a
+                  data-lang="footer.name"
+                  href="https://www.behance.net/polinaklimova2"
                   >Полина Климова</a
                 >
               </li>
@@ -381,7 +396,9 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p class="footer-copy">© 2026 LINGO. Все права защищены.</p>
+          <p class="footer-copy" data-lang="footer.copy">
+            © 2026 LINGO. Все права защищены.
+          </p>
           <div class="footer-social">
             <a href="#" class="social-btn">📱</a>
             <a href="#" class="social-btn">✈️</a>
@@ -397,6 +414,7 @@
     <script type="module" src="javascripts/localization.js"></script>
     <script src="javascripts/cart.js"></script>
     <script src="javascripts/cart-course.js"></script>
+    <script src="javascripts/load-sidemenu.js"></script>
     <script src="javascripts/cart-merch.js"></script>
     <script src="javascripts/filter-for-merch.js"></script>
     <script src="javascripts/header.js"></script>

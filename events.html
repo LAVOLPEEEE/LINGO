@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ивенты</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
   </head>
-  <body>
+  <body data-page="events">
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
@@ -463,7 +472,7 @@
               <span data-lang="cards.games_english.date">30.06.2026</span></span
             >
           </div>
-          <div class="card-footer">
+          <div class="card-event-footer">
             <div class="tags" data-lang-tags="cards.games_english.tags">
               <span data-lang="cards.games_english.tag_games" class="tag"
                 >игры</span
@@ -617,9 +626,11 @@
           <div class="footer-col">
             <h4 data-lang="footer.col3-title">Дизайн</h4>
             <ul class="footer-links">
-              <li><a href="#">Б25ДЗ09</a></li>
+              <li><a data-lang="footer.group" href="#">Б25ДЗ09</a></li>
               <li>
-                <a href="https://www.behance.net/polinaklimova2"
+                <a
+                  data-lang="footer.name"
+                  href="https://www.behance.net/polinaklimova2"
                   >Полина Климова</a
                 >
               </li>
@@ -642,8 +653,10 @@
 
     <script type="module" src="javascripts/localization.js"></script>
     <script src="javascripts/filter-for-events.js"></script>
+    <script src="javascripts/load-sidemenu.js"></script>
     <script src="javascripts/header.js"></script>
     <script src="javascripts/cart.js"></script>
     <script src="javascripts/events-cards.js"></script>
+    <script src="javascripts/load-cart.js"></script>
   </body>
 </html>

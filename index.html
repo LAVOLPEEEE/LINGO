@@ -9,10 +9,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body data-page="home">
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
@@ -88,7 +97,7 @@
       />
       <img
         class="msg2-main-first"
-        src="images/main_first_msg2.svg"
+        src="images/main_first_msg2_ru.svg"
         data-lang-img="main-first-msg2"
         alt=""
       />
@@ -472,9 +481,11 @@
           <div class="footer-col">
             <h4 data-lang="footer.col3-title">Дизайн</h4>
             <ul class="footer-links">
-              <li><a href="#">Б25ДЗ09</a></li>
+              <li><a data-lang="footer.group" href="#">Б25ДЗ09</a></li>
               <li>
-                <a href="https://www.behance.net/polinaklimova2"
+                <a
+                  data-lang="footer.name"
+                  href="https://www.behance.net/polinaklimova2"
                   >Полина Климова</a
                 >
               </li>
@@ -496,6 +507,8 @@
     </footer>
 
     <script src="javascripts/cart.js"></script>
+    <script src="javascripts/load-cart.js"></script>
+    <script src="javascripts/load-sidemenu.js"></script>
     <script src="javascripts/change-words.js"></script>
     <script src="javascripts/header.js"></script>
     <script src="javascripts/faq.js"></script>

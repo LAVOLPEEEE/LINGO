@@ -57,18 +57,22 @@ export default {
   "changing-word": "удобный",
   "main-third.text":
     "Мы не привязываем тебя к жёсткому расписанию. Учись так, как удобно именно тебе.",
-  "feature1-title": "Гибкое расписание",
-  "feature1-text":
+  "main-third.feature1-title": "Гибкое расписание",
+  "main-third.feature1-text":
     "Занятия утром, днём или вечером — выбирай слоты под свой ритм жизни.",
-  "feature2-title": "Личный кабинет",
-  "feature2-text":
+  "main-third.feature2-title": "Личный кабинет",
+  "main-third.feature2-text":
     "Все уроки, задания, прогресс и записи занятий в одном месте.",
-  "feature3-title": "Финальная аттестация",
-  "feature3-text":
+  "main-third.feature3-title": "Финальная аттестация",
+  "main-third.feature3-text":
     "Международный сертификат и помощь с подготовкой к экзаменам.",
   "main-third.btn": "Подробнее об обучении →",
 
   "img.main-third-card": "images/main_third_card_ru.svg",
+
+  "changingWord.0": "удобный",
+  "changingWord.1": "гибкий",
+  "changingWord.2": "успешный",
 
   /* <!------------- ЧЕТВЁРТЫЙ ЭКРАН -----------> */
   "main-forth.label": "Активности",
@@ -106,6 +110,8 @@ export default {
   "card.event5.desc":
     "Смотрим фильм в оригинале, обсуждаем вместе — без субтитров.",
   "card.event5.seats": "30 мест",
+
+  "card.btn": "Участвовать",
 
   /* <!------------- ПЯТЫЙ ЭКРАН -----------> */
   "main-fifth.label": "FAQ",
@@ -156,6 +162,8 @@ export default {
   "footer.about-us": "О нас",
   "footer.col3-title": "Дизайн",
   "footer.copy": "© 2026 LINGO. Все права защищены.",
+  "footer.name": "Полина Климова",
+  "footer.group": "Б25ДЗ09",
 
   /* <!---------------------------- О ШКОЛЕ ------------------------------> */
   /* <!------------- ПЕРВЫЙ ЭКРАН -----------> */
@@ -378,7 +386,13 @@ export default {
   "course-english-life.duration": "6 мес",
   "course-english-life.price": "4 900 ₽ ",
 
-  "course-english-business.title": "Бизнес-английский",
+  "course-english-business.title": "English for Business",
+  "course-english-business.label": "Бизнес-английский",
+  "course-english-business.desc":
+    "Переговоры, презентации, деловая переписка. Реальные кейсы для бизнеса.",
+  "course-english-business.period": "2 раза/нед",
+  "course-english-business.pople": "до 8 чел",
+  "course-english-business.duration": "4 мес",
   "course-english-business.price": "6 500 ₽ ",
 
   "course-german.label": "Немецкий",
@@ -428,6 +442,8 @@ export default {
 
   /* <!------------- ТРЕТИЙ ЭКРАН -----------> */
   "course-third.label": "Второй шаг",
+  "img.stroke-one-hour.yellow": "images/stroke-one-hour_ru.svg",
+  "img.stroke-free.yellow": "images/stroke-free_ru.svg",
 
   /* <!---------------------------- МЕРЧ ------------------------------> */
   "merch-header.title": "МЕРЧ",
@@ -441,38 +457,38 @@ export default {
   "merch-filter.clothes": "ОДЕЖДА",
 
   "merch-tshirt-classic.title": "Футболка LINGO Classic",
-  "merch-tshirt-classic.variants": "+ 12 расцветок",
+  "merch-tshirt-classic.variants": "80% хлопок",
   "merch-tshirt-classic.price": "2 200 ₽",
 
   "merch-cap.title": "Кепка LINGO Logo",
-  "merch-cap.variants": "+ 5 расцветок",
+  "merch-cap.variants": "20% лён",
   "merch-cap.price": "1 800 ₽",
 
   "merch-cup.title": "Кепка LINGO Logo",
-  "merch-cup.variants": "+ 2 расцветки",
+  "merch-cup.variants": "керамика",
   "merch-cup.price": "900 ₽",
 
   "merch-hoody.title": "Худи LINGO Oversized",
-  "merch-hoody.variants": "+ 3 расцветки",
+  "merch-hoody.variants": "90% шерсти",
   "merch-hoody.price": "5 900 ₽",
 
   "merch-shopper.title": "Шопер LINGO Eco",
-  "merch-shopper.variants": "+ 2 расцветки",
+  "merch-shopper.variants": "60% лён",
   "merch-shopper.price": "750 ₽",
 
   "merch-notebook.title": "Блокнот LINGO A5",
-  "merch-notebook.variants": "+ 2 расцветки",
+  "merch-notebook.variants": "40 страниц",
   "merch-notebook.price": "650 ₽",
 
   "merch-jacket.title": "Ветровка Shell",
-  "merch-jacket.variants": "+ 4 расцветки",
+  "merch-jacket.variants": "80% хлопок",
   "merch-jacket.price": "3 950 ₽",
 
   "merch-shorts.title": "Шорты LINGO Summer",
-  "merch-shorts.variants": "+ 8 расцветок",
+  "merch-shorts.variants": "40% шерсти",
   "merch-shorts.price": "2 700 ₽",
 
-  "merch-pon.title": "Ручка LINGO Pack",
+  "merch-pen.title": "Ручка LINGO Pack",
   "merch-pen.variants": "3 штуки в наборе",
   "merch-pen.price": "350 ₽",
 
@@ -529,9 +545,27 @@ export default {
   "study-forth-list.desc":
     "Видишь динамику по грамматике, словарю и разговорным навыкам в графиках.",
 
+  "img.study_second.card": "images/study_second_card_ru.svg",
+  "img.about-forth-stroke-one-hour.yellow": "images/stroke-one-hour-2_ru.svg",
+  "img.about-forth-stroke-free.yellow": "images/stroke-free-2_ru.svg.svg",
+
   /* <!---------------------------- КОРЗИНА ------------------------------> */
   "cart.title": "Корзина",
   "cart.currency": "₽",
   "cart.final-price": "ИТОГО",
   "cart.process-order-btn": "Оформить заказ",
+
+  "cart-courses-title": "Курсы",
+  "cart-merch-title": "Мерч",
+
+  /* <!---------------------------- БОКОВОЕ МЕНЮ ------------------------------> */
+  "side-menu.title": "МЕНЮ",
+  "side-menu.footer-label": "Учим языки вместе",
+
+  /* <!---------------------------- 404 ОШИБКА ------------------------------> */
+
+  "error-404-top.text": "LINGO / страница не найдена",
+  "error-404-small.text": "Ошибка",
+  "error-404-top.msg": "#страницы не существует",
+  "error-404.btn": "← Вернуться назад",
 };

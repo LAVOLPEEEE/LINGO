@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Обучение</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/icon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/icon.png" type="images/png" />
+    <meta property="og:type" content="web-site" />
+    <meta property="og:title" content="LINGO" />
+    <meta
+      property="og:description"
+      content="Креативный многостраничный вебсайт для бренда LINGO"
+    />
+    <meta property="og:url" content="" />
   </head>
 
-  <body>
+  <body data-page="study">
     <header>
       <a href="index.html" class="logo">LINGO</a>
       <nav class="mainMenu">
@@ -234,7 +243,8 @@
       </div>
       <img
         class="study_second_card"
-        src="images/study_second_card.svg"
+        data-lang-img="study_second.card"
+        src="images/study_second_card_ru.svg"
         alt=""
       />
     </section>
@@ -254,12 +264,14 @@
       </div>
       <img
         class="about-forth-stroke-free"
-        src="images/stroke-free-2.svg.svg"
+        data-lang-img="about-forth-stroke-free.yellow"
+        src="images/stroke-free-2_ru.svg.svg"
         alt=""
       />
       <img
         class="about-forth-stroke-one-hour"
-        src="images/stroke-one-hour-2.svg"
+        data-lang-img="about-forth-stroke-one-hour.yellow"
+        src="images/stroke-one-hour-2_ru.svg"
         alt=""
       />
     </section>
@@ -304,9 +316,11 @@
           <div class="footer-col">
             <h4 data-lang="footer.col3-title">Дизайн</h4>
             <ul class="footer-links">
-              <li><a href="#">Б25ДЗ09</a></li>
+              <li><a data-lang="footer.group" href="#">Б25ДЗ09</a></li>
               <li>
-                <a href="https://www.behance.net/polinaklimova2"
+                <a
+                  data-lang="footer.name"
+                  href="https://www.behance.net/polinaklimova2"
                   >Полина Климова</a
                 >
               </li>
@@ -329,5 +343,8 @@
 
     <script src="javascripts/header.js"></script>
     <script type="module" src="javascripts/localization.js"></script>
+    <script src="javascripts/load-sidemenu.js"></script>
+    <script src="javascripts/load-cart.js"></script>
+    <script src="javascripts/cart.js"></script>
   </body>
 </html>
