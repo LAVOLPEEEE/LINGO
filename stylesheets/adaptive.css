@@ -1006,6 +1006,14 @@
   .faq-item.open .faq-answer {
     padding: 0 16px 12px;
   }
+
+  .main-first-title {
+    font-size: 63px;
+  }
+
+  .fifth-h2 {
+    font-size: 44px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1114,8 +1122,7 @@
   }
   .transition-forth-right,
   .transition-forth-left {
-    width: 60vw;
-    opacity: 0.6;
+    display: none;
   }
 }
 
