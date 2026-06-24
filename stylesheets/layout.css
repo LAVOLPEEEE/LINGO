@@ -1801,6 +1801,7 @@ li {
   font-size: 16px;
   text-decoration: none;
   text-align: center;
+  padding: 20px 0;
 }
 .cart-process-order-btn:hover {
   background-color: var(--darkblue2);
