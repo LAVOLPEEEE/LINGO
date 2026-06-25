@@ -630,16 +630,15 @@ nav a.always-active {
   color: var(--black);
   padding: 0.7vw 1.2vw 0.6vw 1.2vw;
   font-size: 0.8vw;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 0 1.5vw 6vw;
-  white-space: nowrap;
 }
 
 .main-forth-title {
   font-family: "CyGrotesk";
   font-size: 3.4vw;
-  color: #fff;
+  color: var(--white);
   margin: 0 0 4vw 6vw;
 }
 
@@ -754,7 +753,6 @@ nav a.always-active {
   padding: 10px 22px;
   font-size: 0.9vw;
   cursor: pointer;
-  white-space: nowrap;
   display: inline-block;
   text-decoration: none;
   transition:
@@ -829,7 +827,7 @@ nav a.always-active {
   color: var(--white);
   padding: 10px 13px;
   font-size: 11px;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 16px;
   width: fit-content;
@@ -1275,7 +1273,7 @@ li {
   font-size: 11px;
   padding: 6px 14px;
   border-radius: 6px;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
 }
 
 .card-course-body {
@@ -1287,8 +1285,7 @@ li {
 
 .lang-label {
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 6px;
   color: var(--darkblue);
@@ -1476,7 +1473,7 @@ li {
 .course-second-lang-name {
   font-family: "Unbounded";
   font-size: 22px;
-  letter-spacing: 0.01em;
+  letter-spacing: 1px;
   line-height: 1;
 }
 
@@ -1572,7 +1569,7 @@ li {
     transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.25s ease;
   position: relative;
-  border: 2px solid #e8e8e8;
+  border: 2px solid var(--grey8);
 }
 
 .card-merch:hover {
@@ -1945,18 +1942,13 @@ li {
   transition:
     transform 0.15s,
     opacity 0.15s;
-  user-select: none;
-  outline: none;
 }
 
 .event-card:hover {
   transform: scale(1.04);
 }
-.event-card:focus-visible {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-}
 .event-card:active {
-  transform: scale(0.97);
+  transform: scale(0.9);
 }
 
 .event-card.green {
@@ -2238,8 +2230,7 @@ li {
 
 .card-event-category {
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 7px;
 }
@@ -2259,7 +2250,7 @@ li {
   font-size: 20px;
   color: var(--black);
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -1px;
   margin-bottom: 10px;
 }
 
@@ -2412,7 +2403,7 @@ li {
   background: var(--black);
   color: var(--white);
   font-size: 11px;
-  letter-spacing: 0.08em;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 9px 19px;
   border-radius: 999px;
